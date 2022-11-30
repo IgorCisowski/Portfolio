@@ -16,16 +16,8 @@
       rel="stylesheet"
     />
     <!--  -->
-    <!-- more google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!--  -->
     <link rel="stylesheet" href="style.css" />
-    <title>Igor Cisowski Portfolio</title>
+    <title>Portfolio</title>
   </head>
   <body>
     <nav class="Navbar">
@@ -74,26 +66,34 @@
         <!-- HTML -->
         <div class="skill">
           <div class="skillLogo">
-            <i class="fa-brands fa-html5"><a href="Skills"></a></i>
+            <i class="fa-brands fa-html5" style="color: #e56027"
+              ><a href="Skills"></a
+            ></i>
           </div>
           <h4>HTML5</h4>
           <p>Good understanding of the hypertext markup language</p>
         </div>
         <!-- CSS -->
         <div class="skill">
-          <div class="skillLogo"><i class="fa-brands fa-css3-alt"></i></div>
+          <div class="skillLogo">
+            <i class="fa-brands fa-css3-alt" style="color: #2760e5"></i>
+          </div>
           <h4>CSS</h4>
           <p>A lot of practice with the use of the cascading style sheets</p>
         </div>
         <!-- JS -->
         <div class="skill">
-          <div class="skillLogo"><i class="fa-brands fa-square-js"></i></div>
+          <div class="skillLogo">
+            <i class="fa-brands fa-square-js" style="color: #f2cd37"></i>
+          </div>
           <h4>Javascript</h4>
           <p>Intemidiat knowlege about manipulating DOM, OOP</p>
         </div>
         <!-- REACT -->
         <div class="skill">
-          <div class="skillLogo"><i class="fa-brands fa-react"></i></div>
+          <div class="skillLogo">
+            <i class="fa-brands fa-react" style="color: #00d1f2"></i>
+          </div>
           <h4>React JS</h4>
           <p>Beginer knowlege about JSX, Router, Hooks, ReduX</p>
         </div>
@@ -104,10 +104,58 @@
         <h3>/ Projects</h3>
         <p>Take a look at my latest projects</p>
       </div>
-      <div class="Project"></div>
+      <div class="Project">
+        <div class="projectPhoto">
+          <img src="/images/Zrzut ekranu (9).png" alt="festival" />
+        </div>
+        <article>
+        <div class="projectName">Festival</div>
+        <div class="forWho">
+          University Project: <i class="fa-brands fa-html5"></i
+          ><i class="fa-brands fa-css3-alt"></i
+          ><i class="fa-brands fa-square-js"></i>
+        </div>
+        <p>Developed a festival website according to the assignment scenario</p>
+      </div>
+    </article>
+    <!-- second one -->
+    <div class="Project">
+        <div class="projectPhoto">
+          <img src="/images/Zrzut ekranu (6).png" alt="festival" />
+        </div>
+        <article>
+        <div class="projectName">To Do App</div>
+        <div class="forWho">
+          Personal Project: <i class="fa-brands fa-html5"></i
+          ><i class="fa-brands fa-css3-alt"></i
+          ><i class="fa-brands fa-square-js"></i>
+        </div>
+        <p>Created the most basic and comon App around Web Developers</p>
+      </div>
+    </article>
+    <!--  -->
+      <div class="checkIt"></div>
     </section>
-    <section class="Contact" id="Contact"></section>
-    <footer class="Footer"></footer>
+    <section class="Contact" id="Contact">
+        <div class="contactHeader">
+            <h3>/ Contact</h3>
+            <p>Interested in working together? Let's talk</p>
+          </div>
+          <div class="contactForm">
+            <form action="">
+                <div class="yourName">
+                    <input type="text" name="name" id="name" placeholder="Full Name">
+                </div>
+                <div class="yourEmail">
+                    <input type="text" name="email" id="email" placeholder="Email address">
+                </div>
+                <div class="yourName">
+                    <textarea name="meassage" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                </div>
+            </form>
+          </div>
+    </section>
+    <footer class="Footer">Igor Cisowski &#169 2022 | all rights reserved</footer>
     <script src="main.js"></script>
   </body>
 </html>

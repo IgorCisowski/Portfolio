@@ -46,8 +46,8 @@ ul {
   height: 92vh;
   top: 8vh;
   right: 0;
-  background-color: rgba(29, 29, 29, 0.5);
-  backdrop-filter: blur(5px);
+  background-color: rgba(29, 29, 29, 0.6);
+  backdrop-filter: blur(10px);
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
 }
@@ -227,7 +227,7 @@ a {
   overflow: hidden;
   width: 100%;
   padding: 55px 15px;
-
+  max-width: 1200px;
   background-color: rgb(92, 91, 87);
 }
 
@@ -256,6 +256,7 @@ h3 {
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
+  min-width: 100%;
   /* background-color: rgb(92, 91, 87); */
   background-color: rgb(29, 29, 29);
   border-radius: 20px;
@@ -269,7 +270,8 @@ h3 {
   font-size: 40px;
   margin-bottom: 15px;
   /* background-color: rgb(29, 29, 29); */
-  background-color: rgb(92, 91, 87);
+  /* background-color: rgb(92, 91, 87); */
+  background-color: white;
   border-radius: 50%;
   width: 7vh;
   height: 7vh;
@@ -288,13 +290,16 @@ h3 {
 }
 /* SECTION PORTFOLIO */
 .Projects {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
   width: 100%;
   padding: 55px 15px;
+  border-bottom: 2px solid rgb(92, 91, 87);
 }
 
 .projectHeader {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .projectHeader p {
@@ -302,7 +307,111 @@ h3 {
 }
 
 .Project {
+  display: flex;
+  flex-direction: column;
   border-radius: 16px;
+  /* padding: 30px 20px; */
+  background-color: rgb(92, 91, 87);
+}
+
+.projectPhoto {
+  position: relative;
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  padding: 85px 0;
+  /* height: 30vh; */
+  overflow: hidden;
+}
+
+.projectPhoto img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+article {
+  padding: 20px 25px 30px;
+}
+
+.projectName {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.forWho {
+  font-size: 18px;
+}
+
+.forWho i {
+  padding: 5px;
+}
+
+.Project p {
+  font-size: 16px;
+}
+
+/* CONTACT */
+
+.Contact {
+  background-color: rgb(92, 91, 87);
+  width: 100%;
+  padding: 55px 20px;
+}
+
+.contactHeader {
+  margin-bottom: 50px;
+}
+.contactHeader p {
+  font-size: 24px;
+}
+
+.contactForm {
+  background-color: rgb(29, 29, 29);
+  padding: 50px 30px 60px;
+  border-radius: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  color: white;
+  font-size: 18px;
+  padding-bottom: 12px;
+  outline: none;
+  border-style: none;
+  border-radius: 0;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(92, 91, 87);
+  width: 100%;
+}
+
+textarea {
+  color: white;
+  min-height: 110px;
+  font-size: 18px;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(92, 91, 87);
+  font-family: "Montserrat", sans-serif;
+}
+
+::placeholder {
+  color: white;
+}
+
+/* FOOTER */
+
+.Footer {
   padding: 30px 20px;
-  background-color: gray;
+  text-align: center;
+  font-size: 16px;
 }
