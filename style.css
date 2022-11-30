@@ -370,14 +370,15 @@ article {
 
 .contactForm {
   background-color: rgb(29, 29, 29);
-  padding: 50px 30px 60px;
+  padding: 55px 30px 60px;
   border-radius: 16px;
+  margin-bottom: 40px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 input {
@@ -394,7 +395,7 @@ input {
 
 textarea {
   color: white;
-  min-height: 110px;
+  min-height: 128px;
   font-size: 18px;
   width: 100%;
   background-color: transparent;
@@ -406,6 +407,28 @@ textarea {
 
 ::placeholder {
   color: white;
+}
+
+.otherContact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.otherContact p {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.social {
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+  font-size: 30px;
 }
 
 /* FOOTER */
