@@ -304,7 +304,6 @@ h3 {
   gap: 35px;
   width: 100%;
   padding: 55px 15px;
-  border-bottom: 2px solid rgb(92, 91, 87);
 }
 
 .projectHeader {
@@ -366,7 +365,7 @@ article {
   scroll-margin: 50px;
   background-color: rgb(92, 91, 87);
   width: 100%;
-  padding: 55px 20px;
+  padding: 55px 20px 45px;
 }
 
 .contactHeader {
@@ -378,7 +377,7 @@ article {
 
 .contactForm {
   background-color: rgb(29, 29, 29);
-  padding: 55px 30px 60px;
+  padding: 45px 10px 60px;
   border-radius: 16px;
   margin-bottom: 40px;
 }
@@ -404,7 +403,7 @@ input {
 textarea {
   border-radius: none;
   color: white;
-  min-height: 128px;
+  max-height: 128px;
   font-size: 18px;
   width: 100%;
   background-color: transparent;
@@ -430,7 +429,7 @@ textarea {
   width: 100%;
   text-align: center;
   font-size: 24px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .social {
@@ -443,6 +442,7 @@ textarea {
 /* FOOTER */
 
 .Footer {
+  width: 100%;
   padding: 30px 20px;
   text-align: center;
   font-size: 16px;
