@@ -11,7 +11,6 @@ html {
 body {
   color: white;
   font-family: "Montserrat", sans-serif;
-  /* font-family: "Space Grotesk", sans-serif; */
   background-color: rgb(29, 29, 29);
 }
 
@@ -48,6 +47,7 @@ ul {
   right: 0;
   background-color: rgba(29, 29, 29, 0.6);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
 }
@@ -65,7 +65,6 @@ a {
 .burgerMenu {
   width: 30px;
   height: 30px;
-  /* border: 2px solid black; */
 }
 
 .line {
@@ -310,7 +309,6 @@ h3 {
   display: flex;
   flex-direction: column;
   border-radius: 16px;
-  /* padding: 30px 20px; */
   background-color: rgb(92, 91, 87);
 }
 
@@ -319,7 +317,6 @@ h3 {
   border-radius: 16px 16px 0 0;
   width: 100%;
   padding: 85px 0;
-  /* height: 30vh; */
   overflow: hidden;
 }
 
@@ -394,6 +391,7 @@ input {
 }
 
 textarea {
+  border-radius: none;
   color: white;
   min-height: 128px;
   font-size: 18px;
