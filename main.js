@@ -22,17 +22,11 @@ burgerMenu.addEventListener("click", toggleMenu);
 
 // Section scroll
 
-document.querySelectorAll("a").forEach((el) => {
-  el.addEventListener("click", () => {
-    const goToSection = "#" + this.classList[0];
-    if (goToSection === "#Home") {
-      scroll({
-        top: document.querySelector(goToSection).scrollTop,
-        behavior: "smooth",
-      });
-      return;
-    }
-
-    document.querySelector(goToSection).scrollIntoView({ behavior: "smooth" });
+document.querySelectorAll('a[href]="#"').forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    document
+      .querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
   });
 });

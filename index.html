@@ -64,16 +64,15 @@
         <h3>/ My skills</h3>
         <p>My extensive list of skills</p>
       </div>
-      <div class="cards" data-aos="zoom-in-up" data-aos-delay="150">
+      <div class="cards" data-aos="fade-up" data-aos-delay="150">
         <!-- HTML -->
         <div class="skill">
           <div class="skillLogo">
-            <i class="fa-brands fa-html5" style="color: #e56027"
-              ><a href="Skills"></a
-            ></i>
+            <i class="fa-brands fa-html5" style="color: #e56027"></i>
           </div>
           <h4>HTML5</h4>
           <p>Good understanding of the hypertext markup language</p>
+          <div class="paragraph"></div>
         </div>
         <!-- CSS -->
         <div class="skill">
@@ -82,6 +81,7 @@
           </div>
           <h4>CSS</h4>
           <p>A lot of practice with the use of the cascading style sheets</p>
+          <div class="paragraph"></div>
         </div>
         <!-- JS -->
         <div class="skill">
@@ -90,20 +90,22 @@
           </div>
           <h4>Javascript</h4>
           <p>Intemidiat knowlege about manipulating DOM, OOP</p>
+          <div class="paragraph"></div>
         </div>
         <!-- REACT -->
         <div class="skill">
           <div class="skillLogo">
             <i class="fa-brands fa-react" style="color: #00d1f2"></i>
           </div>
-          <h4>React JS</h4>
+          <h4>React&nbspJS</h4>
           <p>Beginer knowlege about JSX, Router, Hooks, ReduX</p>
+          <div class="paragraph"></div>
         </div>
       </div>
     </section>
     <section class="Projects" id="Projects" >
       <div class="projectHeader" data-aos="fade-up" data-aos-delay="100">
-        <h3>/ Projects</h3>
+        <h3>/ My Projects</h3>
         <p>Take a look at my latest projects</p>
       </div>
       <div class="Project" data-aos="fade-up" data-aos-delay="150">
@@ -140,21 +142,23 @@
     </section>
     <section class="Contact" id="Contact">
         <div class="contactHeader" data-aos="fade-up" data-aos-delay="100">
-            <h3>/ Contact</h3>
+            <h3>/ Contact me</h3>
             <p>Have a question? Want to Collaborate? Send me a message</p>
           </div>
           <div class="contactForm" data-aos="fade-up" data-aos-delay="150">
             <form action="">
                 <div class="yourName">
-                    <input type="text" name="name" id="name" placeholder="Full Name">
+                    <input class="fullNameEmail" type="text" name="name" id="name" placeholder="Full Name" required>
                 </div>
                 <div class="yourEmail">
-                    <input type="text" name="email" id="email" placeholder="Email address">
+                    <input class="fullNameEmail" type="text" name="email" id="email" placeholder="Email address" required>
                 </div>
                 <div class="yourName">
-                    <textarea name="meassage" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <textarea name="meassage" id="message" placeholder="Your Message" required></textarea>
                 </div>
+                <div class="sent"><input class="submitName" type='submit' value="Contact me"><div class="submitArrow"><i class="fa-solid fa-arrow-right"></i></div></div>
             </form>
+
           </div>
           <div class="otherContact"><p data-aos="fade-up" data-aos-delay="100">Or reach out to me on</p>
             <div class="social"><a href="https://www.facebook.com/igor.cisowski.9" target="_blank" data-aos="fade-up" data-aos-delay="100"><i class="fa-brands fa-facebook"></i></a>
