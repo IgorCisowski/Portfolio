@@ -30,3 +30,13 @@ document.querySelectorAll('a[href]="#"').forEach((el) => {
       .scrollIntoView({ behavior: "smooth" });
   });
 });
+
+// ddd
+// const form = document.querySelector("form");
+// const submit = document.querySelector(".sent");
+
+// const sent = (e) => {
+//   e.preventDefault();
+// };
+
+// submit.addEventListener("click", sent);

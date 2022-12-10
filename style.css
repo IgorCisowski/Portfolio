@@ -35,14 +35,13 @@ html {
 
 body {
   color: white;
-  /* font-family: "Montserrat", sans-serif; */
   font-family: "Spacegrotesk", sans-serif;
   background-color: rgb(29, 29, 29);
 }
 
 ::-webkit-scrollbar {
   background-color: transparent;
-  width: 5px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -64,7 +63,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px 0 10px;
+  padding: 0 15px 0 15px;
   width: 100%;
   height: 8vh;
   box-shadow: 2px 0 10px black;
@@ -72,7 +71,7 @@ body {
 }
 
 .logo {
-  flex-basis: 40%;
+  flex-basis: 10%;
   color: white;
   font-size: 23px;
 }
@@ -262,14 +261,13 @@ a {
 
 .About p:nth-child(2) {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 
 .About .me {
   font-size: 16px;
   margin-bottom: 25px;
-  /* color: #d6d6d6; */
 }
 
 .resume {
@@ -291,10 +289,8 @@ a {
 
 .Skills {
   scroll-margin: 50px;
-  /* check if allright */
-  min-width: 100%;
   padding: 55px 15px;
-  max-width: 1200px;
+  width: 100%;
   background-color: rgb(60, 60, 60);
 }
 
@@ -316,11 +312,16 @@ h3 {
 }
 
 .cards {
+  width: 100%;
   display: flex;
   gap: 20px;
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
 }
+
+/* .cards::-webkit-scrollbar {
+  display: none;
+} */
 
 .skill {
   scroll-snap-align: center;
@@ -382,6 +383,23 @@ h3 {
   font-weight: 700;
 }
 
+.projectHeader i {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.partOne {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.secondOne {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
 .Project {
   display: flex;
   flex-direction: column;
@@ -439,7 +457,6 @@ article {
   text-transform: uppercase;
   border-bottom: 1px solid rgb(112, 111, 106);
   letter-spacing: 0.5px;
-  /* overflow: hidden; */
   padding-bottom: 6px;
   margin-right: auto;
 }
@@ -486,6 +503,14 @@ article {
   100% {
     transform: translateY(-4px);
   }
+}
+
+.checkIt {
+  width: calc(100% - 35px);
+  margin: 0 auto;
+  height: 1px;
+  background-color: rgb(92, 91, 87);
+  margin-bottom: 70px;
 }
 
 /* CONTACT */
@@ -547,6 +572,7 @@ textarea {
   background-color: transparent;
   outline: none;
   border: none;
+  resize: none;
   /* border-bottom: 2px solid rgb(92, 91, 87); */
   border-bottom: 2px solid rgb(60, 60, 60);
   /* font-family: "Montserrat", sans-serif; */
@@ -625,7 +651,7 @@ textarea:focus {
   text-align: center;
   font-size: 18px;
   margin-bottom: 18px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -652,4 +678,435 @@ textarea:focus {
   text-align: center;
   font-size: 16px;
   font-weight: 500;
+}
+
+@media (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    line-height: 1.7em;
+  }
+  .active {
+    padding: 0;
+  }
+  .active ul {
+    padding: 20px;
+  }
+  .active a {
+    font-size: 40px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .active a:hover {
+    font-size: 47px;
+  }
+  .Home {
+    padding-top: 30px;
+  }
+  .portait {
+    width: 33vh;
+    height: 33vh;
+  }
+
+  .introduction p:nth-child(1) {
+    font-size: 20px;
+  }
+
+  .introduction p:nth-child(2) {
+    font-size: 32px;
+  }
+
+  .introduction p:nth-child(3) {
+    font-size: 20px;
+  }
+
+  .connect {
+    width: 25%;
+  }
+
+  .knowMore i {
+    padding-bottom: 25px;
+  }
+
+  .About {
+    padding: 100px 24px 70px;
+  }
+  .Skills {
+    padding: 100px 24px 60px;
+  }
+  .Projects {
+    padding: 100px 24px 50px;
+  }
+  .Contact {
+    padding: 100px 24px 50px;
+  }
+
+  .skill {
+    min-width: 48%;
+  }
+
+  .About p:nth-child(2) {
+    font-size: 32px;
+  }
+
+  .skillsHeader p {
+    font-size: 32px;
+  }
+
+  .projectHeader p {
+    font-size: 32px;
+    margin-bottom: 150px;
+  }
+
+  .projectHeader i {
+    font-size: 28px;
+    margin-left: 10px;
+  }
+
+  .contactHeader p {
+    font-size: 32px;
+  }
+
+  .partOne {
+    gap: 25px;
+  }
+
+  .secondOne {
+    gap: 10px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .resume {
+    font-size: 20px;
+  }
+
+  .About .me {
+    font-size: 18px;
+  }
+
+  .Projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 40px;
+  }
+
+  .Project {
+    margin-bottom: 42px;
+  }
+
+  .projectName {
+    font-size: 22px;
+  }
+
+  article p {
+    font-size: 18px;
+  }
+
+  .fullNameEmail {
+    font-size: 22px;
+  }
+
+  textarea {
+    font-size: 22px;
+  }
+  .otherContact p {
+    font-size: 20px;
+  }
+
+  .social {
+    width: 54%;
+  }
+
+  .Footer {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 992px) {
+  ul {
+    justify-content: flex-end;
+    flex-direction: row;
+    position: static;
+    height: 2px;
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transform: none;
+    padding-bottom: 0;
+    transition: none;
+    margin-right: 120px;
+  }
+
+  .logo {
+    margin-left: 135px;
+  }
+
+  li {
+    padding: 15px;
+  }
+
+  a {
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0s;
+  }
+
+  li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: 0.3s;
+  }
+
+  a:hover::after {
+    width: 100%;
+  }
+
+  .burgerMenu {
+    display: none;
+  }
+
+  /* HOME */
+  .Home {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 110px 43px 0 24px;
+    flex-wrap: wrap;
+    /* background-image: url(/images/3147814222581.jpg);
+    background-size: cover;
+    background-position: center; */
+  }
+
+  .portait {
+    width: 45vh;
+    height: 45vh;
+  }
+
+  .introduction {
+    align-items: flex-start;
+    margin-top: 35px;
+    width: 65%;
+    flex-grow: 1;
+    line-height: 2.9em;
+  }
+
+  .introduction p:nth-child(1) {
+    font-size: 26px;
+  }
+
+  .introduction p:nth-child(2) {
+    font-size: 62px;
+  }
+
+  .introduction p:nth-child(3) {
+    font-size: 26px;
+  }
+
+  .connect {
+    justify-content: flex-start;
+    width: 30%;
+    margin-top: 10px;
+  }
+
+  .connect i {
+    font-size: 30px;
+  }
+
+  .link {
+    margin-left: 25px;
+  }
+
+  .knowMore {
+    padding-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .knowMore i {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .About {
+    padding: 160px 24px 140px;
+  }
+  .Skills {
+    padding: 160px 24px 120px;
+  }
+  .Projects {
+    padding: 160px 24px 30px;
+  }
+  .Contact {
+    padding: 170px 24px 70px;
+  }
+
+  .skillsHeader p,
+  .projectHeader p,
+  .contactHeader p {
+    font-size: 52px;
+    line-height: 1.2em;
+  }
+
+  /* ABOUT */
+  .About p:nth-child(2) {
+    font-size: 52px;
+    line-height: 1.2em;
+  }
+
+  .About p:nth-child(3) {
+    margin-right: 10%;
+  }
+
+  .About p:nth-child(4) {
+    margin-right: 10%;
+  }
+
+  /* PROJECT */
+
+  .Project {
+    margin: 0 10px 30px;
+    /* background-color: rgba(60, 60, 60, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); */
+  }
+  article {
+    padding: 40px 24px 70px;
+  }
+
+  .checkOut i {
+    margin-top: 7px;
+  }
+
+  .checkIt {
+    margin-bottom: 140px;
+  }
+  /* SKILLS */
+
+  /* COntact */
+  .Contact {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-size: cover;
+    background-position: center;
+    background-image: url(/images/3147814222581.jpg); */
+  }
+
+  .contactHeader {
+    width: 45%;
+  }
+
+  .contactForm {
+    flex-grow: 1;
+    margin-left: 5%;
+    /* margin-bottom: 90px; */
+  }
+
+  .fullNameEmail {
+    font-size: 24px;
+  }
+
+  textarea {
+    font-size: 24px;
+  }
+
+  .sent::after {
+    bottom: -2px;
+  }
+
+  .sent input {
+    font-size: 24px;
+  }
+
+  .otherContact p {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+
+  .social {
+    width: 40%;
+  }
+
+  .social i {
+    font-size: 30px;
+  }
+
+  /* FOOTER */
+
+  .Footer {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Home {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+  .About {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+  .Skills {
+    scroll-margin: -35px;
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+  .Projects {
+    scroll-margin: -35px;
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+  .Contact {
+    scroll-margin: -10px;
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+
+  ul a {
+    margin-left: 20px;
+  }
+
+  .portait {
+    width: 55vh;
+    height: 55vh;
+  }
+
+  .introduction p:nth-child(1) {
+    font-size: 32px;
+  }
+
+  .introduction p:nth-child(2) {
+    font-size: 76px;
+  }
+
+  .introduction p:nth-child(3) {
+    font-size: 32px;
+  }
+  .knowMore {
+    padding-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .knowMore i {
+    font-size: 40px;
+    margin-bottom: 45px;
+  }
+
+  /* SKILLS */
+
+  .skill {
+    min-width: 30%;
+  }
 }
