@@ -86,9 +86,12 @@ ul {
   height: 92vh;
   top: 8vh;
   right: 0;
-  background-color: rgba(29, 29, 29, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(29, 29, 29, 1);
+  background-image: radial-gradient(
+    farthest-corner at bottom right,
+    #3f2323,
+    transparent 400px
+  );
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
   padding-bottom: 50px;
@@ -152,7 +155,7 @@ a {
   background-image: radial-gradient(
     farthest-corner at top right,
     #3f2323,
-    transparent 1000px
+    transparent 350px
   );
 }
 
@@ -278,7 +281,7 @@ a {
 
 .resume {
   /* border-bottom: 2px solid rgb(92, 91, 87); */
-  border-bottom: 2px solid #791818e3;
+  border-bottom: 2px solid #791818b6;
   padding-bottom: 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -302,7 +305,7 @@ a {
   background-image: radial-gradient(
     farthest-corner at right bottom,
     #3f2323,
-    transparent 1000px
+    transparent 350px
   );
 }
 
@@ -329,7 +332,7 @@ h3 {
   gap: 20px;
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
-  padding: 0 0 10px;
+  padding: 0 5px 10px 0;
 }
 
 .cards::-webkit-scrollbar {
@@ -346,8 +349,8 @@ h3 {
   padding: 60px 30px 50px;
 
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
 }
 
@@ -426,8 +429,8 @@ h3 {
   background-color: rgba(60, 60, 60, 0.2);
 
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
 }
 
@@ -534,7 +537,7 @@ article {
   margin: 0 auto;
   height: 1px;
   /* background-color: rgb(92, 91, 87); */
-  background-color: #791818e1;
+  background-color: #791818b6;
   margin-bottom: 70px;
 }
 
@@ -553,7 +556,7 @@ span {
   background-image: radial-gradient(
     farthest-corner at bottom right,
     #3f2323,
-    transparent 1000px
+    transparent 350px
   );
 }
 
@@ -566,7 +569,8 @@ span {
 }
 
 .contactForm {
-  background-color: rgba(29, 29, 29, 0.5);
+  position: relative;
+  background-color: rgba(29, 29, 29, 0.6);
   padding: 45px 10px 60px;
   border-radius: 16px;
   margin-bottom: 40px;
@@ -575,6 +579,45 @@ span {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
+}
+
+.complete {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  background-color: rgba(29, 29, 29, 1);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.complete div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  border: 4px solid #791818b6;
+  border-radius: 50%;
+  width: 8vh;
+  height: 8vh;
+}
+
+.complete i {
+  font-size: 40px;
+}
+.complete h1 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.complete p {
+  font-size: 16px;
+  text-align: center;
+  padding: 0 10px;
 }
 
 form {
@@ -622,6 +665,7 @@ textarea {
 
 textarea:focus {
   border-bottom: 2px solid white;
+  border-radius: none;
 }
 
 .sent {
@@ -743,6 +787,16 @@ textarea:focus {
   }
   .Home {
     padding-top: 30px;
+    background-image: radial-gradient(
+      farthest-corner at top right,
+      #3f2323,
+      transparent 1000px
+    );
+    /* background: radial-gradient(
+      80% 80% at 110% 40%,
+      #3f2323 0,
+      transparent 100%
+    ); */
   }
   .portait {
     width: 33vh;
@@ -774,12 +828,22 @@ textarea:focus {
   }
   .Skills {
     padding: 100px 24px 60px;
+    background-image: radial-gradient(
+      farthest-corner at right bottom,
+      #3f2323,
+      transparent 1000px
+    );
   }
   .Projects {
     padding: 100px 24px 50px;
   }
   .Contact {
     padding: 100px 24px 50px;
+    background-image: radial-gradient(
+      farthest-corner at bottom right,
+      #3f2323,
+      transparent 1000px
+    );
   }
 
   .skill {
@@ -813,7 +877,7 @@ textarea:focus {
   }
 
   .secondOne {
-    gap: 10px;
+    gap: 25px;
   }
 
   h3 {
@@ -925,9 +989,6 @@ textarea:focus {
     align-items: center;
     padding: 110px 43px 0 24px;
     flex-wrap: wrap;
-    /* background-image: url(/images/3147814222581.jpg);
-    background-size: cover;
-    background-position: center; */
   }
 
   .portait {
@@ -1018,10 +1079,8 @@ textarea:focus {
 
   .Project {
     margin: 0 10px 30px;
-    /* background-color: rgba(60, 60, 60, 0.4);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px); */
   }
+
   article {
     padding: 40px 24px 70px;
   }
@@ -1039,9 +1098,6 @@ textarea:focus {
   .Contact {
     display: flex;
     flex-wrap: wrap;
-    /* background-size: cover;
-    background-position: center;
-    background-image: url(/images/3147814222581.jpg); */
   }
 
   .contactHeader {
@@ -1051,7 +1107,24 @@ textarea:focus {
   .contactForm {
     flex-grow: 1;
     margin-left: 5%;
-    /* margin-bottom: 90px; */
+  }
+
+  .complete div {
+    width: 12vh;
+    height: 12vh;
+  }
+
+  .complete i {
+    font-size: 56px;
+  }
+  .complete h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  .complete p {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 10px;
   }
 
   .fullNameEmail {
@@ -1151,6 +1224,10 @@ textarea:focus {
 
   .skill {
     min-width: 30%;
+  }
+
+  .Projects {
+    grid-column-gap: 55px;
   }
 
   .checkIt {

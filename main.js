@@ -22,7 +22,7 @@ burgerMenu.addEventListener("click", toggleMenu);
 
 // Section scroll
 
-document.querySelectorAll('a[href]="#"').forEach((el) => {
+document.querySelectorAll("a[href='#']").forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
     document
@@ -32,11 +32,27 @@ document.querySelectorAll('a[href]="#"').forEach((el) => {
 });
 
 // ddd
-// const form = document.querySelector("form");
-// const submit = document.querySelector(".sent");
+// let form = document.getElementById("my-form");
 
-// const sent = (e) => {
+// const sentMessage = (e) => {
 //   e.preventDefault();
 // };
 
-// submit.addEventListener("click", sent);
+// form.addEventListener("sumbit", sentMessage);
+
+// const sent = document.querySelector(".sent");
+// const complete = document.querySelector(".complete");
+// const input = document.querySelectorAll("input");
+// const textarea = document.querySelector("textarea");
+
+// const showMessage = () => {
+//   console.log("click");
+
+//   complete.style.visibility = "visible";
+
+//   input.forEach((i) => (i.style.visibility = "hidden"));
+//   textarea.style.visibility = "hidden";
+//   sent.style.visibility = "hidden";
+// };
+
+// sent.addEventListener("click", showMessage);
