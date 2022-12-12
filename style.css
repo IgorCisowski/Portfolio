@@ -1194,20 +1194,23 @@ textarea:focus {
   }
 
   .portait {
-    width: 55vh;
-    height: 55vh;
+    width: 48vh;
+    height: 48vh;
+  }
+  .introduction {
+    width: 55%;
   }
 
   .introduction p:nth-child(1) {
-    font-size: 32px;
+    font-size: 22px;
   }
 
   .introduction p:nth-child(2) {
-    font-size: 76px;
+    font-size: 60px;
   }
 
   .introduction p:nth-child(3) {
-    font-size: 32px;
+    font-size: 22px;
   }
   .knowMore {
     padding-bottom: 0;
@@ -1239,6 +1242,24 @@ textarea:focus {
   }
 
   .projectHeader i {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 1430px) {
+  .portait {
+    width: 55vh;
+    height: 55vh;
+  }
+
+  .introduction p:nth-child(1) {
+    font-size: 32px;
+  }
+
+  .introduction p:nth-child(2) {
+    font-size: 76px;
+  }
+
+  .introduction p:nth-child(3) {
     font-size: 32px;
   }
 }
