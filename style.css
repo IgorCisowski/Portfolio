@@ -148,7 +148,12 @@ a {
   padding-top: 8vh;
   width: 100%;
   height: 92vh;
-  background-color: rgb(60, 60, 60);
+  background-color: rgba(60, 60, 60, 0.2);
+  background-image: radial-gradient(
+    farthest-corner at top right,
+    #3f2323,
+    transparent 1000px
+  );
 }
 
 .portait {
@@ -174,7 +179,8 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: black;
+  /* background-color: black; */
+  background-color: #3f2323;
   border-radius: 50%;
   z-index: 1;
   opacity: 0.7;
@@ -271,7 +277,8 @@ a {
 }
 
 .resume {
-  border-bottom: 2px solid rgb(92, 91, 87);
+  /* border-bottom: 2px solid rgb(92, 91, 87); */
+  border-bottom: 2px solid #791818e3;
   padding-bottom: 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -291,7 +298,12 @@ a {
   scroll-margin: 50px;
   padding: 55px 15px;
   width: 100%;
-  background-color: rgb(60, 60, 60);
+  background-color: rgba(60, 60, 60, 0.2);
+  background-image: radial-gradient(
+    farthest-corner at right bottom,
+    #3f2323,
+    transparent 1000px
+  );
 }
 
 .skillsHeader {
@@ -317,20 +329,26 @@ h3 {
   gap: 20px;
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
+  padding: 0 0 10px;
 }
 
-/* .cards::-webkit-scrollbar {
+.cards::-webkit-scrollbar {
   display: none;
-} */
+}
 
 .skill {
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   min-width: 100%;
-  background-color: rgb(29, 29, 29);
+  background-color: rgba(29, 29, 29, 0.5);
   border-radius: 20px;
   padding: 60px 30px 50px;
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
 }
 
 .skillLogo {
@@ -362,6 +380,7 @@ h3 {
   width: 100%;
   max-width: 56px;
   min-height: 6px;
+  /* background-color: white; */
   background-color: white;
 }
 /* SECTION PORTFOLIO */
@@ -404,7 +423,12 @@ h3 {
   display: flex;
   flex-direction: column;
   border-radius: 16px;
-  background-color: rgb(60, 60, 60);
+  background-color: rgba(60, 60, 60, 0.2);
+
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
 }
 
 .projectPhoto {
@@ -509,17 +533,28 @@ article {
   width: calc(100% - 35px);
   margin: 0 auto;
   height: 1px;
-  background-color: rgb(92, 91, 87);
+  /* background-color: rgb(92, 91, 87); */
+  background-color: #791818e1;
   margin-bottom: 70px;
 }
 
 /* CONTACT */
-
+span {
+  display: inline-block;
+  color: #791818;
+  /* padding-bottom: 40px; */
+}
 .Contact {
   scroll-margin: 50px;
-  background-color: rgb(60, 60, 60);
+  background-color: rgba(60, 60, 60, 0.2);
+
   width: 100%;
   padding: 55px 15px 45px;
+  background-image: radial-gradient(
+    farthest-corner at bottom right,
+    #3f2323,
+    transparent 1000px
+  );
 }
 
 .contactHeader {
@@ -531,10 +566,15 @@ article {
 }
 
 .contactForm {
-  background-color: rgb(29, 29, 29);
+  background-color: rgba(29, 29, 29, 0.5);
   padding: 45px 10px 60px;
   border-radius: 16px;
   margin-bottom: 40px;
+
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
 }
 
 form {
@@ -853,17 +893,20 @@ textarea:focus {
     position: relative;
     font-size: 20px;
     font-weight: 400;
-    transition: 0s;
+    transition: 0.2s;
   }
 
+  li a:hover {
+    color: #791818;
+  }
   li a::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 0;
-    height: 1px;
-    background-color: white;
+    height: 1.5px;
+    background-color: #791818;
     transition: 0.3s;
   }
 
@@ -1108,5 +1151,17 @@ textarea:focus {
 
   .skill {
     min-width: 30%;
+  }
+
+  .checkIt {
+    width: 80%;
+  }
+
+  .projectPhoto {
+    padding: 180px 0;
+  }
+
+  .projectHeader i {
+    font-size: 32px;
   }
 }
