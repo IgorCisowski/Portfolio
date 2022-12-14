@@ -105,11 +105,11 @@ ul {
   background-image: radial-gradient(
     farthest-corner at bottom right,
     #3f2323,
-    transparent 450px
+    transparent 350px
   );
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
-  padding: 0 0 80px;
+  padding: 30px 30px 38px;
 }
 
 li {
@@ -579,7 +579,7 @@ article {
 
 .checkIt {
   min-width: calc(100%-20px);
-  margin: 0 14px 70px;
+  margin: 0 17px 70px;
   height: 2px;
   background-color: #791818b6;
 }
@@ -592,9 +592,9 @@ article {
   width: 100%;
   padding: 70px 15px 70px;
   background-image: radial-gradient(
-    farthest-corner at bottom right,
+    50% 50% at 100% 120%,
     #3f2323,
-    transparent 370px
+    transparent 450px
   );
 }
 
@@ -611,7 +611,7 @@ article {
 .contactForm {
   position: relative;
   background-color: rgba(29, 29, 29, 0.6);
-  padding: 45px 10px 70px;
+  padding: 45px 10px 74px;
   border-radius: 16px;
   margin-bottom: 60px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4);
