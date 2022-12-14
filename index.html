@@ -5,39 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-        <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- animations -->
+    <!-- ANIMATIONS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- FONT AWESOME -->
-    <script
-      src="https://kit.fontawesome.com/364963514c.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!--  -->
+    <script src="https://kit.fontawesome.com/364963514c.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+    <!-- TITLE -->
     <title>Portfolio</title>
   </head>
   <body>
+    <!-- NAVBAR -->
     <nav class="Navbar">
       <div class="logo">
         <i class="fa-solid fa-code"></i>
       </div>
       <ul>
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Skills">Skills</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#Contact">Contact</a></li>
+        <li>
+          <a href="#Home">Home</a>
+        </li>
+        <li>
+          <a href="#About">About</a>
+        </li>
+        <li>
+          <a href="#Skills">Skills</a>
+        </li>
+        <li>
+          <a href="#Projects">Projects</a>
+        </li>
+        <li>
+          <a href="#Contact">Contact</a>
+        </li>
       </ul>
       <div class="burgerMenu">
         <span class="line"></span>
@@ -45,203 +43,265 @@
         <span class="line"></span>
       </div>
     </nav>
+    <!-- HOME -->
     <main class="Home" id="Home">
-      <div class="portait"  data-aos="fade-up" data-aos-delay="100"><img src="images/igor.jpg" alt="Igor" /></div>
+      <div class="portait" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/igor.jpg" alt="Igor" />
+      </div>
       <div class="introduction" data-aos="fade-up" data-aos-delay="150">
         <p>Hello! I'm</p>
         <p>Igor Cisowski</p>
         <p>Web Developer</p>
         <div class="connect">
-          <div class="git"><a href="https://github.com/IGORCISOWSKI" target="_blank"><i class="fa-brands fa-github"></i></a></div>
-          <div class="link"><a href="https://www.linkedin.com/in/igor-cisowski-94375b244/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+          <div class="git">
+            <a href="https://github.com/IGORCISOWSKI" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+          <div class="link">
+            <a href="https://www.linkedin.com/in/igor-cisowski-94375b244/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
         </div>
       </div>
       <div class="knowMore" data-aos="fade-up" data-aos-delay="200">
-        <a href="#About"><i class="fa-solid fa-chevron-down"></i></a>
+        <a href="#About">
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
       </div>
     </main>
-    <section class="About" id="About" data-aos="fade-up" data-aos-delay="100">
-      <h3><span>/</span> About me</h3>
+    <!-- ABOUT SECTION -->
+    <section class="About" id="About" data-aos="fade-up" data-aos-delay="50">
+      <h3>
+        <span>/</span> About me
+      </h3>
       <p>I'm an upcoming web developer</p>
-      <p class="me">My name is Igor, I'm a second-year student of Computer Science. I'm highly passionate about programming and building websites. I started my journey with web development half a year ago where I learned the basics of programming including HTML5, CSS, Javascript, and React which I am still learning.</p><p class="me"> My goal is to find a job as a web developer since I believe it will take my coding skills to the next level and it will allow me to develop and learn new things while working on new and exciting projects</p>
-      <div class="resume"><a href="/Igor-CV.docx" download>my resume <i class="fa-solid fa-download"></i></a></div>
+      <p class="me">My name is Igor, I'm a second-year student of Computer Science. I'm highly passionate about programming and building websites. I started my journey with web development half a year ago where I learned the basics of programming including HTML5, CSS, Javascript, and React which I am still learning.</p>
+      <p class="me"> My goal is to find a job as a web developer since I believe it will take my coding skills to the next level and it will allow me to develop and learn new things while working on new and exciting projects</p>
+      <div class="resume">
+        <a href="/Igor-CV.docx" download>my resume <i class="fa-solid fa-download"></i>
+        </a>
+      </div>
     </section>
+    <!-- SKILLS SECTION -->
     <section class="Skills" id="Skills">
       <div class="skillsHeader" data-aos="fade-up" data-aos-delay="100">
-        <h3><span>/</span> My skills</h3>
+        <h3>
+          <span>/</span> My skills
+        </h3>
         <p>My extensive list of skills</p>
       </div>
-
-
-      <!-- added -->
-        <div class="cards" data-aos="fade-up" data-aos-delay="150">
-          <!-- HTML -->
-          <div class="skill">
-            <div class="skillLogo">
-              <i class="fa-brands fa-html5" style="color: #e56027"></i>
-            </div>
-            <h4>HTML5</h4>
-            <p>Good understanding of the hypertext markup language its semantic elements and structure</p>
-            <div class="paragraph"></div>
+      <!-- EACH SKILL -->
+      <div class="cards" data-aos="fade-up" data-aos-delay="150">
+        <!-- HTML -->
+        <div class="skill">
+          <div class="skillLogo">
+            <i class="fa-brands fa-html5" style="color: #e56027"></i>
           </div>
-          <!-- CSS -->
-          <div class="skill">
-            <div class="skillLogo">
-              <i class="fa-brands fa-css3-alt" style="color: #2760e5"></i>
-            </div>
-            <h4>CSS</h4>
-            <p>Lots of practice with cascadian style sheets and layout techniques including float flex and grid</p>
-            <div class="paragraph"></div>
-          </div>
-          <!-- JS -->
-          <div class="skill">
-            <div class="skillLogo">
-              <i class="fa-brands fa-square-js" style="color: #f2cd37"></i>
-            </div>
-            <h4>Javascript</h4>
-            <p>Intermediate knowledge of JS and its concepts including loops, functions, conditionals, DOM manipulation, etc.</p>
-            <div class="paragraph"></div>
-          </div>
-          <!-- REACT -->
-          <div class="skill">
-            <div class="skillLogo">
-              <i class="fa-brands fa-react" style="color: #00d1f2"></i>
-            </div>
-            <h4>React&nbspJS</h4>
-            <p>
-              Advanced beginner of React and its concepts including JSX, components, props, react Router, hooks and Redux</p>
-            <div class="paragraph"></div>
+          <h4>HTML5</h4>
+          <p>Good understanding of the hypertext markup language its semantic elements and structure</p>
+          <div class="paragraph"></div>
         </div>
-        
+        <!-- CSS -->
+        <div class="skill">
+          <div class="skillLogo">
+            <i class="fa-brands fa-css3-alt" style="color: #2760e5"></i>
+          </div>
+          <h4>CSS</h4>
+          <p>Lots of practice with cascadian style sheets and layout techniques including float flex and grid</p>
+          <div class="paragraph"></div>
         </div>
+        <!-- JS -->
+        <div class="skill">
+          <div class="skillLogo">
+            <i class="fa-brands fa-square-js" style="color: #f2cd37"></i>
+          </div>
+          <h4>Javascript</h4>
+          <p>Intermediate knowledge of JS and its concepts including loops, functions, conditionals, DOM manipulation, etc.</p>
+          <div class="paragraph"></div>
+        </div>
+        <!-- REACT -->
+        <div class="skill">
+          <div class="skillLogo">
+            <i class="fa-brands fa-react" style="color: #00d1f2"></i>
+          </div>
+          <h4>React&nbspJS</h4>
+          <p> Advanced beginner of React and its concepts including JSX, components, props, react Router, hooks and Redux</p>
+          <div class="paragraph"></div>
+        </div>
+      </div>
+      <span class="swipe">
+        <i class="fa-regular fa-hand-pointer"></i> swipe left </span>
     </section>
-    
-
-    <section class="Projects" id="Projects" >
-              <!-- NOWEEEEEEEEEEEEEEEEE -->
-              <div class="partOne">
-      <div class="projectHeader" data-aos="fade-up" data-aos-delay="100">
-        <h3><span>/</span> My Projects</h3>
-        <p>Take a look at my latest projects<i class="fa-solid fa-arrow-right"></i></p>
-      </div>
-      <!-- FIRST ONE -->
-      <div class="Project" data-aos="fade-up" data-aos-delay="150">
-        <div class="projectPhoto">
-          <img src="images/Festival.png" alt="festival" />
+    <!-- PROJECTS SECTION -->
+    <section class="Projects" id="Projects">
+      <!-- PART ONE -->
+      <div class="partOne">
+        <div class="projectHeader" data-aos="fade-up" data-aos-delay="100">
+          <h3>
+            <span>/</span> My Projects
+          </h3>
+          <p>Take a look at my latest projects <i class="fa-solid fa-arrow-right"></i>
+          </p>
         </div>
-        <article>
-        <div class="projectName">Festival</div>
-        <div class="forWho">
-          University Project: <i class="fa-brands fa-html5" style="color: #e56027;" ></i
-          ><i class="fa-brands fa-css3-alt" style="color: #2760e5"></i
-          ><i class="fa-brands fa-square-js" style="color: #f2cd37"></i> | <a href="https://github.com/IgorCisowski/Festival-project" target="_blank" class="githubToProject"><i class="fa-brands fa-github"></i></a>
+        <!-- FIRST ONE -->
+        <div class="Project" data-aos="fade-up" data-aos-delay="150">
+          <div class="projectPhoto">
+            <img src="images/Festival.png" alt="festival" />
+          </div>
+          <article>
+            <div class="projectName">Festival</div>
+            <div class="forWho"> University Project: <i class="fa-brands fa-html5" style="color: #e56027;"></i>
+              <i class="fa-brands fa-css3-alt" style="color: #2760e5"></i>
+              <i class="fa-brands fa-square-js" style="color: #f2cd37"></i> | <a href="https://github.com/IgorCisowski/Festival-project" target="_blank" class="githubToProject">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <p>Developed a festival website according to the assignment scenario</p>
+            <div class="checkOut">
+              <a href="https://igorcisowski.github.io/Festival-project/#Home" target="_blank">
+                <p>View project</p>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
         </div>
-        <p>Developed a festival website according to the assignment scenario</p>
-        <div class="checkOut"><a href="https://igorcisowski.github.io/Festival-project/#Home" target="_blank"><p>View project</p><i class="fa-solid fa-arrow-right"></i></a></div>
-      </div>
-    </article>
-    <!-- second one -->
-    <div class="Project" data-aos="fade-up" data-aos-delay="150">
-        <div class="projectPhoto">
-          <img src="images/ToDo.png" alt="To do App" />
+        <!-- SECOND ONE -->
+        <div class="Project" data-aos="fade-up" data-aos-delay="150">
+          <div class="projectPhoto">
+            <img src="images/ToDo.png" alt="To do App" />
+          </div>
+          <article>
+            <div class="projectName">To Do App</div>
+            <div class="forWho"> Personal Project: <i class="fa-brands fa-html5" style="color: #e56027;"></i>
+              <i class="fa-brands fa-css3-alt" style="color: #2760e5"></i>
+              <i class="fa-brands fa-square-js" style="color: #f2cd37"></i> | <a href="https://github.com/IgorCisowski/To-Do-App" target="_blank" class="githubToProject">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <p>Created the most basic and comon App around Web Developers</p>
+            <div class="checkOut">
+              <a href="https://igorcisowski.github.io/To-Do-App/" target="_blank">
+                <p>View project</p>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
         </div>
-        <article >
-        <div class="projectName">To Do App</div>
-        <div class="forWho">
-          Personal Project: <i class="fa-brands fa-html5" style="color: #e56027;" ></i
-            ><i class="fa-brands fa-css3-alt" style="color: #2760e5"></i
-            ><i class="fa-brands fa-square-js" style="color: #f2cd37"></i> | <a href="https://github.com/IgorCisowski/To-Do-App"  target="_blank" class="githubToProject"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <!-- PART TWO -->
+      <div class="secondOne">
+        <!-- THIRD ONE -->
+        <div class="Project" data-aos="fade-up" data-aos-delay="150">
+          <div class="projectPhoto">
+            <img src="images/eccomerce.png" alt="Ecommers" />
+          </div>
+          <article>
+            <div class="projectName">Ecommers</div>
+            <div class="forWho">Personal Project: <i class="fa-brands fa-react" style="color: #00d1f2"></i> | <a href="/#" class="githubToProject" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <p>Created a Ecommers shop using react js</p>
+            <div class="checkOut">
+              <a href="#">
+                <p>View project</p>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
         </div>
-        <p>Created the most basic and comon App around Web Developers</p>
-        <div class="checkOut"><a href="https://igorcisowski.github.io/To-Do-App/" target="_blank"><p>View project</p><i class="fa-solid fa-arrow-right"></i></a></div>
+        <!-- FOURTH ONE -->
+        <div class="Project" data-aos="fade-up" data-aos-delay="150">
+          <div class="projectPhoto">
+            <img src="images/weatherApp.png" alt="Weather App" />
+          </div>
+          <article>
+            <div class="projectName">Weather App</div>
+            <div class="forWho"> Personal Project: <i class="fa-brands fa-react" style="color: #00d1f2"></i> | <a href="https://github.com/IgorCisowski/Weather-app" target="_blank" class="githubToProject">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <p>Created a weather app by using react js and fetch API</p>
+            <div class="checkOut">
+              <a href="/#">
+                <p>View project</p>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
       </div>
-    </article>
-  </div>
-    <!--  -->
-    <div class="secondOne">
-     <!-- third one -->
-     <div class="Project" data-aos="fade-up" data-aos-delay="150">
-      <div class="projectPhoto">
-        <img src="images/eccomerce.png" alt="Ecommers" />
-      </div>
-      <article >
-      <div class="projectName">Ecommers</div>
-      <div class="forWho">
-        Personal Project: <i class="fa-brands fa-react" style="color: #00d1f2"></i> | <a href="/#" class="githubToProject"  target="_blank"><i class="fa-brands fa-github"></i></a>
-      </div>
-      <p>Created a Ecommers shop using react js</p>
-      <div class="checkOut"><a href="#"><p>View project</p><i class="fa-solid fa-arrow-right"></i></a></div>
-    </div>
-  </article>
-  <!--  -->
-   <!-- fourth one -->
-   <div class="Project" data-aos="fade-up" data-aos-delay="150">
-    <div class="projectPhoto">
-      <img src="images/weatherApp.png" alt="Weather App" />
-    </div>
-    <article>
-    <div class="projectName">Weather App</div>
-    <div class="forWho">
-      Personal Project: <i class="fa-brands fa-react" style="color: #00d1f2" ></i> | <a href="https://github.com/IgorCisowski/Weather-app"  target="_blank" class="githubToProject"><i class="fa-brands fa-github"></i></a>
-    </div>
-    <p>Created a weather app by using react js and fetch API</p>
-    <div class="checkOut"><a href="/#"><p>View project</p><i class="fa-solid fa-arrow-right"></i></a></div>
-  </div>
-</article>
-</div>
-<!--  -->
     </section>
     <div class="checkIt"></div>
+    <!-- CONTACT SECTION -->
     <section class="Contact" id="Contact">
-        <div class="contactHeader" data-aos="fade-up" data-aos-delay="100">
-            <h3><span>/</span> Contact me</h3>
-            <p>Have a question? Want to Collaborate? Send me a message</p>
+      <div class="contactHeader" data-aos="fade-up" data-aos-delay="100">
+        <h3>
+          <span>/</span> Contact me
+        </h3>
+        <p>Have a question? Want to Collaborate? Send me a message</p>
+      </div>
+      <!-- CONTACT FORM -->
+      <div class="contactForm" data-aos="fade-up" data-aos-delay="150">
+        <form id="my-form" action="https://formspree.io/f/xjvznjzv" method="POST">
+          <div class="yourName">
+            <input class="fullNameEmail" type="text" name="name" id="name" placeholder="Full Name" required>
           </div>
-
-          <div class="contactForm" data-aos="fade-up" data-aos-delay="150">
-            <form id="my-form" action="https://formspree.io/f/xjvznjzv" method="POST">
-                <div class="yourName">
-                    <input class="fullNameEmail" type="text" name="name" id="name" placeholder="Full Name" required>
-                </div>
-                <div class="yourEmail">
-                    <input class="fullNameEmail" type="text" name="email" id="email" placeholder="Email address" required>
-                </div>
-                <div class="yourMessage">
-                    <textarea name="meassage" id="message" placeholder="Your Message" required></textarea>
-                </div>
-                <div class="sent"><input id="my-form-button" class="sent" type='submit' value="Contact me"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="complete" id="my-form-status">
-
-                  <div id="my-form-status"><i class="fa-solid fa-check"></i></div>
-                  <h1>Thank you</h1>
-                  <p>Thanks for reaching out. I will get back to you soon.</p>
-                </div>
-
-            </form>
+          <div class="yourEmail">
+            <input class="fullNameEmail" type="text" name="email" id="email" placeholder="Email address" required>
           </div>
-
-          <div class="otherContact"><p data-aos="fade-up" data-aos-delay="100">Or reach out to me on</p>
-            <div class="social"><a href="https://www.facebook.com/igor.cisowski.9" target="_blank" data-aos="fade-up" data-aos-delay="100"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://github.com/IGORCISOWSKI" target="_blank" data-aos="fade-up" data-aos-delay="150"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/igor-cisowski-94375b244/" target="_blank" data-aos="fade-up" data-aos-delay="200"><i class="fa-brands fa-linkedin"></i></a></div></div>
+          <div class="yourMessage">
+            <textarea name="meassage" id="message" placeholder="Your Message" required></textarea>
+          </div>
+          <div class="sent">
+            <input id="my-form-button" class="sent" type='submit' value="Contact me">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <!-- AFTER SUBMIT DIV -->
+          <div class="complete" id="my-form-status">
+            <div id="my-form-status">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h1>Thank you</h1>
+            <p>Thanks for reaching out. I will get back to you soon.</p>
+          </div>
+        </form>
+      </div>
+      <!-- OTHER CONTACT -->
+      <div class="otherContact">
+        <p data-aos="fade-up" data-aos-delay="100">Or reach out to me on</p>
+        <div class="social">
+          <a href="https://www.facebook.com/igor.cisowski.9" target="_blank" data-aos="fade-up" data-aos-delay="100">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://github.com/IGORCISOWSKI" target="_blank" data-aos="fade-up" data-aos-delay="150">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/igor-cisowski-94375b244/" target="_blank" data-aos="fade-up" data-aos-delay="200">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
     </section>
-    <footer class="Footer" >Igor Cisowski &#169 2022 | all rights reserved</footer>
-         <!-- ANIMATIONS -->
-         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- FOOTER -->
+    <footer class="Footer">Igor Cisowski &#169 2022 | all rights reserved</footer>
+    <!-- ANIMATIONS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
         duration: 500,
         once: true,
       });
     </script>
-    <!--  -->
+    <!-- CONTACT FORM AJAX SCRIPT -->
     <script>
       var form = document.getElementById("my-form");
       const sent = document.querySelector(".sent");
       const complete = document.querySelector(".complete");
       const input = document.querySelector(".yourName");
       const textarea = document.querySelector(".yourMessage");
-
       async function handleSubmit(event) {
         event.preventDefault();
         var status = document.getElementById("my-form-status");
@@ -250,16 +310,11 @@
           method: form.method,
           body: data,
           headers: {
-              'Accept': 'application/json'
+            'Accept': 'application/json'
           }
         }).then(response => {
           if (response.ok) {
-
             complete.style.visibility = "visible";
-            // input.forEach((i) => (i.style.visibility = "hidden"));
-            // textarea.style.visibility = "hidden";
-            // sent.style.visibility = "hidden";
-            
             form.reset()
           } else {
             response.json().then(data => {
@@ -275,11 +330,8 @@
         });
       }
       form.addEventListener("submit", handleSubmit)
-  </script>
-    <!--  -->
+    </script>
+    <!-- MAIN JS SCRIPT -->
     <script src="main.js"></script>
   </body>
 </html>
-
-
-

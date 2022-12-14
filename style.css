@@ -1,3 +1,5 @@
+/* IMPORTED FONT-FAMILY */
+
 @font-face {
   font-family: "Spacegrotesk";
   src: url("https://assets.website-files.com/622fbc5a718ac3417fcd3d75/622fc8f87fd5f314f8fc8126_SpaceGrotesk-Medium.woff")
@@ -23,21 +25,30 @@
   font-display: swap;
 }
 
+/* DEFAULT RESET */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* HTML */
+
 html {
   scroll-behavior: smooth;
 }
 
+/* BODY */
+
 body {
+  line-height: 1.4em;
   color: white;
   font-family: "Spacegrotesk", sans-serif;
   background-color: rgb(29, 29, 29);
 }
+
+/* SCROLL BAR */
 
 ::-webkit-scrollbar {
   background-color: transparent;
@@ -54,6 +65,8 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
 }
+
+/* NAVBAR */
 
 .Navbar {
   position: fixed;
@@ -76,6 +89,8 @@ body {
   font-size: 23px;
 }
 
+/* NAV MENU */
+
 ul {
   display: flex;
   flex-direction: column;
@@ -90,11 +105,11 @@ ul {
   background-image: radial-gradient(
     farthest-corner at bottom right,
     #3f2323,
-    transparent 400px
+    transparent 450px
   );
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
-  padding-bottom: 50px;
+  padding: 0 0 80px;
 }
 
 li {
@@ -105,10 +120,12 @@ li {
 a {
   text-decoration: none;
   color: white;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
   transition: 0.7s;
 }
+
+/* BURGER MENU */
 
 .burgerMenu {
   width: 30px;
@@ -141,6 +158,8 @@ a {
   transform: translateX(0);
 }
 
+/* HOME SECTION */
+
 .Home {
   scroll-margin: 70px;
   display: flex;
@@ -153,16 +172,18 @@ a {
   height: 92vh;
   background-color: rgba(60, 60, 60, 0.2);
   background-image: radial-gradient(
-    farthest-corner at top right,
+    50% 50% at 75% 10%,
     #3f2323,
     transparent 350px
   );
 }
 
+/* HOME PORTRAIT */
+
 .portait {
   position: relative;
-  width: 30vh;
-  height: 30vh;
+  width: 32vh;
+  height: 32vh;
   border-radius: 50%;
 }
 
@@ -204,6 +225,8 @@ a {
   }
 }
 
+/* HOME INTRODUCTION */
+
 .introduction {
   display: flex;
   flex-direction: column;
@@ -211,6 +234,7 @@ a {
   align-items: center;
   width: 100%;
   font-size: 18px;
+  line-height: 1.5em;
 }
 
 .introduction p:nth-child(2) {
@@ -259,16 +283,23 @@ a {
     transform: translateY(0);
   }
 }
+
 /* ABOUT ME SECTION */
+
+span {
+  display: inline-block;
+  color: #791818;
+}
 
 .About {
   position: relative;
-  scroll-margin: 50px;
+  scroll-margin: 65px;
   width: 100%;
-  padding: 55px 15px;
+  padding: 70px 15px;
 }
 
 .About p:nth-child(2) {
+  line-height: 1.6em;
   font-size: 24px;
   margin-bottom: 20px;
   font-weight: 700;
@@ -280,7 +311,6 @@ a {
 }
 
 .resume {
-  /* border-bottom: 2px solid rgb(92, 91, 87); */
   border-bottom: 2px solid #791818b6;
   padding-bottom: 30px;
   font-weight: 700;
@@ -295,17 +325,18 @@ a {
 .resume i {
   padding-left: 5px;
 }
-/* SEKCTION SKILLS */
+
+/* SKILLS SECTION */
 
 .Skills {
-  scroll-margin: 50px;
-  padding: 55px 15px;
+  scroll-margin: 65px;
+  padding: 70px 15px;
   width: 100%;
   background-color: rgba(60, 60, 60, 0.2);
   background-image: radial-gradient(
     farthest-corner at right bottom,
     #3f2323,
-    transparent 350px
+    transparent 360px
   );
 }
 
@@ -322,8 +353,20 @@ h3 {
 }
 
 .skillsHeader p {
+  line-height: 1.6em;
   font-size: 24px;
   font-weight: 700;
+}
+
+.swipe {
+  padding: 20px 0 0 10px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.swipe i {
+  color: #791818;
+  margin-right: 5px;
 }
 
 .cards {
@@ -383,17 +426,18 @@ h3 {
   width: 100%;
   max-width: 56px;
   min-height: 6px;
-  /* background-color: white; */
   background-color: white;
 }
+
 /* SECTION PORTFOLIO */
+
 .Projects {
-  scroll-margin: 50px;
+  scroll-margin: 65px;
   display: flex;
   flex-direction: column;
   gap: 35px;
   width: 100%;
-  padding: 55px 15px;
+  padding: 70px 15px;
 }
 
 .projectHeader {
@@ -401,6 +445,7 @@ h3 {
 }
 
 .projectHeader p {
+  line-height: 1.3em;
   font-size: 24px;
   font-weight: 700;
 }
@@ -427,7 +472,6 @@ h3 {
   flex-direction: column;
   border-radius: 16px;
   background-color: rgba(60, 60, 60, 0.2);
-
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-left: 1px solid rgba(255, 255, 255, 0.3);
@@ -487,6 +531,7 @@ article {
   padding-bottom: 6px;
   margin-right: auto;
 }
+
 .checkOut:after {
   content: "";
   position: absolute;
@@ -533,37 +578,32 @@ article {
 }
 
 .checkIt {
-  width: calc(100% - 35px);
-  margin: 0 auto;
-  height: 1px;
-  /* background-color: rgb(92, 91, 87); */
+  min-width: calc(100%-20px);
+  margin: 0 14px 70px;
+  height: 2px;
   background-color: #791818b6;
-  margin-bottom: 70px;
 }
 
-/* CONTACT */
-span {
-  display: inline-block;
-  color: #791818;
-  /* padding-bottom: 40px; */
-}
+/* CONTACT SECTION */
+
 .Contact {
-  scroll-margin: 50px;
-  background-color: rgba(60, 60, 60, 0.2);
-
+  scroll-margin: 65px;
+  background-color: rgba(60, 60, 60, 0.6);
   width: 100%;
-  padding: 55px 15px 45px;
+  padding: 70px 15px 70px;
   background-image: radial-gradient(
     farthest-corner at bottom right,
     #3f2323,
-    transparent 350px
+    transparent 370px
   );
 }
 
 .contactHeader {
   margin-bottom: 50px;
 }
+
 .contactHeader p {
+  line-height: 1.3em;
   font-size: 24px;
   font-weight: 700;
 }
@@ -571,10 +611,9 @@ span {
 .contactForm {
   position: relative;
   background-color: rgba(29, 29, 29, 0.6);
-  padding: 45px 10px 60px;
+  padding: 45px 10px 70px;
   border-radius: 16px;
-  margin-bottom: 40px;
-
+  margin-bottom: 60px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -656,9 +695,7 @@ textarea {
   outline: none;
   border: none;
   resize: none;
-  /* border-bottom: 2px solid rgb(92, 91, 87); */
   border-bottom: 2px solid rgb(60, 60, 60);
-  /* font-family: "Montserrat", sans-serif; */
   font-family: "spacegrotesk", sans-serif;
   transition: 0.3s;
 }
@@ -741,7 +778,7 @@ textarea:focus {
 
 .social {
   display: flex;
-  width: 60%;
+  width: 70%;
   justify-content: space-evenly;
   font-size: 30px;
 }
@@ -764,8 +801,7 @@ textarea:focus {
   font-weight: 500;
 }
 
-@media (min-width: 576px) {
-}
+/*                                 MEDIA QUERIES MIN-WIDTH 768px                                */
 
 @media screen and (min-width: 768px) {
   body {
@@ -839,11 +875,6 @@ textarea:focus {
   }
   .Contact {
     padding: 100px 24px 50px;
-    background-image: radial-gradient(
-      farthest-corner at bottom right,
-      #3f2323,
-      transparent 1000px
-    );
   }
 
   .skill {
@@ -930,6 +961,9 @@ textarea:focus {
     font-size: 18px;
   }
 }
+
+/*                                 MEDIA QUERIES MIN-WIDTH 992px                                */
+
 @media screen and (min-width: 992px) {
   ul {
     justify-content: flex-end;
@@ -989,6 +1023,11 @@ textarea:focus {
     align-items: center;
     padding: 110px 43px 0 24px;
     flex-wrap: wrap;
+    background-image: radial-gradient(
+      farthest-corner at top right,
+      #3f2323,
+      transparent 1300px
+    );
   }
 
   .portait {
@@ -1052,6 +1091,11 @@ textarea:focus {
   }
   .Contact {
     padding: 170px 24px 70px;
+    background-image: radial-gradient(
+      farthest-corner at bottom right,
+      #3f2323,
+      transparent 1200px
+    );
   }
 
   .skillsHeader p,
@@ -1164,6 +1208,8 @@ textarea:focus {
   }
 }
 
+/*                                 MEDIA QUERIES MIN-WIDTH 1200px                                */
+
 @media screen and (min-width: 1200px) {
   .Home {
     padding-right: 150px;
@@ -1245,6 +1291,9 @@ textarea:focus {
     font-size: 32px;
   }
 }
+
+/*                                 MEDIA QUERIES MIN-WIDTH 1430px                                */
+
 @media screen and (min-width: 1430px) {
   .portait {
     width: 55vh;
