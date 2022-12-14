@@ -299,7 +299,7 @@ span {
 }
 
 .About p:nth-child(2) {
-  line-height: 1.3em;
+  line-height: 1.25em;
   font-size: 24px;
   margin-bottom: 20px;
   font-weight: 700;
@@ -353,7 +353,7 @@ h3 {
 }
 
 .skillsHeader p {
-  line-height: 1.3em;
+  line-height: 1.25em;
   font-size: 24px;
   font-weight: 700;
 }
@@ -445,7 +445,7 @@ h3 {
 }
 
 .projectHeader p {
-  line-height: 1.3em;
+  line-height: 1.25em;
   font-size: 24px;
   font-weight: 700;
 }
@@ -603,7 +603,7 @@ article {
 }
 
 .contactHeader p {
-  line-height: 1.3em;
+  line-height: 1.25em;
   font-size: 24px;
   font-weight: 700;
 }
