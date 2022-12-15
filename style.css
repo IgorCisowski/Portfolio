@@ -167,7 +167,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 8vh;
-  /* padding-top: 8vh; */
+  padding-top: 4vh;
   width: 100%;
   height: 92vh;
   background-color: rgba(60, 60, 60, 0.2);
@@ -365,7 +365,7 @@ h3 {
 }
 
 .swipe i {
-  color: #791818;
+  color: #851a1a;
   margin-right: 5px;
 }
 
@@ -375,6 +375,7 @@ h3 {
   gap: 20px;
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
+  scroll-behavior: smooth;
   padding: 0 5px 10px 0;
 }
 
@@ -383,7 +384,7 @@ h3 {
 }
 
 .skill {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   min-width: 100%;
@@ -395,6 +396,8 @@ h3 {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
+
+  user-select: none;
 }
 
 .skillLogo {
@@ -407,6 +410,11 @@ h3 {
   border-radius: 50%;
   width: 7vh;
   height: 7vh;
+}
+
+.html,
+.css {
+  padding-top: 4px;
 }
 
 .skill h4 {
@@ -435,6 +443,7 @@ h3 {
   scroll-margin: 60px;
   display: flex;
   flex-direction: column;
+  justify-content: baseline;
   gap: 35px;
   width: 100%;
   padding: 70px 15px;
@@ -452,7 +461,7 @@ h3 {
 
 .projectHeader i {
   font-size: 20px;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .partOne {
@@ -536,18 +545,19 @@ article {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 0;
   transition: 0.3s;
 }
 
 .checkOut:hover::after {
   width: 100%;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
 }
 
 .checkOut a {
   display: flex;
+  align-items: baseline;
   font-size: 16px;
   font-weight: 400;
 }
@@ -558,7 +568,6 @@ article {
 
 .checkOut i {
   margin-left: 6px;
-  padding-top: 3.3px;
   transition: 0.3s;
 }
 
@@ -578,8 +587,8 @@ article {
 }
 
 .checkIt {
-  min-width: calc(100%-20px);
-  margin: 0 17px 70px;
+  display: block;
+  margin: 0 16px 70px;
   height: 2px;
   background-color: #791818b6;
 }
@@ -588,7 +597,7 @@ article {
 
 .Contact {
   scroll-margin: 60px;
-  background-color: rgba(60, 60, 60, 0.6);
+  background-color: rgba(60, 60, 60, 0.2);
   width: 100%;
   padding: 70px 15px 70px;
   background-image: radial-gradient(
@@ -708,10 +717,10 @@ textarea:focus {
 .sent {
   position: relative;
   display: flex;
+  align-items: baseline;
   margin-right: auto;
   font-weight: bold;
   justify-content: flex-start;
-  align-items: center;
   padding-bottom: 6px;
   border-bottom: 2px solid rgb(60, 60, 60);
   cursor: pointer;
@@ -721,9 +730,9 @@ textarea:focus {
   position: absolute;
   content: "";
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 0;
-  border-bottom: 2px solid white;
+  border-bottom: 2.3px solid white;
   transition: 0.3s;
 }
 
@@ -745,9 +754,8 @@ textarea:focus {
 }
 
 .sent i {
-  margin-top: 5px;
   margin-left: 6px;
-  font-size: 22px;
+  font-size: 20px;
   transition: 0.3s;
 }
 
@@ -795,24 +803,27 @@ textarea:focus {
 
 .Footer {
   width: 100%;
-  padding: 30px 20px;
+  padding: 35px 20px;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
 }
 
-/*                                 MEDIA QUERIES MIN-WIDTH 768px                                */
+/*-----------------------------------------                                 MEDIA QUERIES MIN-WIDTH 768px                                -----------------------------------------*/
 
 @media screen and (min-width: 768px) {
   body {
-    line-height: 1.7em;
+    line-height: 1.65em;
   }
-  .active {
-    padding: 0;
+
+  ul {
+    background-image: radial-gradient(
+      farthest-corner at bottom right,
+      #3f2323,
+      transparent 750px
+    );
   }
-  .active ul {
-    padding: 20px;
-  }
+
   .active a {
     font-size: 40px;
     transition: 0.3s ease-in-out;
@@ -821,60 +832,73 @@ textarea:focus {
   .active a:hover {
     font-size: 47px;
   }
+
   .Home {
     padding-top: 30px;
     background-image: radial-gradient(
       farthest-corner at top right,
       #3f2323,
-      transparent 1000px
+      transparent 800px
     );
-    /* background: radial-gradient(
-      80% 80% at 110% 40%,
-      #3f2323 0,
-      transparent 100%
-    ); */
   }
+
   .portait {
-    width: 33vh;
-    height: 33vh;
+    width: 40vh;
+    height: 40vh;
+  }
+
+  .introduction {
+    line-height: 1.75em;
   }
 
   .introduction p:nth-child(1) {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .introduction p:nth-child(2) {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .introduction p:nth-child(3) {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .connect {
-    width: 25%;
+    width: 20%;
+  }
+
+  .connect i {
+    font-size: 30px;
   }
 
   .knowMore i {
-    padding-bottom: 25px;
+    padding-bottom: 37px;
   }
 
   .About {
     padding: 100px 24px 70px;
   }
+
   .Skills {
     padding: 100px 24px 60px;
     background-image: radial-gradient(
       farthest-corner at right bottom,
       #3f2323,
-      transparent 1000px
+      transparent 800px
     );
   }
+
   .Projects {
     padding: 100px 24px 50px;
   }
+
   .Contact {
     padding: 100px 24px 50px;
+    background-image: radial-gradient(
+      farthest-corner at right bottom,
+      #3f2323,
+      transparent 750px
+    );
   }
 
   .skill {
@@ -896,7 +920,6 @@ textarea:focus {
 
   .projectHeader i {
     font-size: 28px;
-    margin-left: 10px;
   }
 
   .contactHeader p {
@@ -909,6 +932,10 @@ textarea:focus {
 
   .secondOne {
     gap: 25px;
+  }
+
+  .checkIt {
+    margin: 0 24px 70px;
   }
 
   h3 {
@@ -949,6 +976,7 @@ textarea:focus {
   textarea {
     font-size: 22px;
   }
+
   .otherContact p {
     font-size: 20px;
   }
@@ -962,25 +990,26 @@ textarea:focus {
   }
 }
 
-/*                                 MEDIA QUERIES MIN-WIDTH 992px                                */
+/*-----------------------------------------                                 MEDIA QUERIES MIN-WIDTH 992px                                -----------------------------------------*/
 
 @media screen and (min-width: 992px) {
   ul {
     justify-content: flex-end;
     flex-direction: row;
     position: static;
-    height: 2px;
+    height: auto;
+    background: transparent;
     background-color: transparent;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     transform: none;
-    padding-bottom: 0;
+    padding: 0;
     transition: none;
-    margin-right: 120px;
+    margin-right: 0px;
   }
 
   .logo {
-    margin-left: 135px;
+    margin-left: 10px;
   }
 
   li {
@@ -997,6 +1026,7 @@ textarea:focus {
   li a:hover {
     color: #791818;
   }
+
   li a::after {
     content: "";
     position: absolute;
@@ -1026,7 +1056,7 @@ textarea:focus {
     background-image: radial-gradient(
       farthest-corner at top right,
       #3f2323,
-      transparent 1300px
+      transparent 1000px
     );
   }
 
@@ -1081,20 +1111,30 @@ textarea:focus {
   }
 
   .About {
+    scroll-margin: 0px;
     padding: 160px 24px 140px;
   }
+
   .Skills {
+    scroll-margin: -50px;
     padding: 160px 24px 120px;
+    background-image: radial-gradient(
+      farthest-corner at bottom right,
+      #3f2323,
+      transparent 900px
+    );
   }
-  .Projects {
-    padding: 160px 24px 30px;
+
+  .skill {
+    padding: 80px 30px;
   }
+
   .Contact {
     padding: 170px 24px 70px;
     background-image: radial-gradient(
       farthest-corner at bottom right,
       #3f2323,
-      transparent 1200px
+      transparent 900px
     );
   }
 
@@ -1120,6 +1160,10 @@ textarea:focus {
   }
 
   /* PROJECT */
+  .Projects {
+    padding: 160px 24px 30px;
+    scroll-margin: -20px;
+  }
 
   .Project {
     margin: 0 10px 30px;
@@ -1136,10 +1180,15 @@ textarea:focus {
   .checkIt {
     margin-bottom: 140px;
   }
-  /* SKILLS */
 
-  /* COntact */
+  /* SKILLS */
+  .cards {
+    gap: 26px;
+  }
+
+  /* Contact */
   .Contact {
+    scroll-margin: -20px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -1211,40 +1260,69 @@ textarea:focus {
 /*                                 MEDIA QUERIES MIN-WIDTH 1200px                                */
 
 @media screen and (min-width: 1200px) {
+  .logo {
+    padding-left: 134px;
+  }
+
+  ul {
+    padding-right: 134px;
+  }
+
+  li {
+    padding: 25px;
+  }
+
   .Home {
     padding-right: 150px;
     padding-left: 150px;
+    background-image: radial-gradient(
+      farthest-corner at top right,
+      #3f2323,
+      transparent 1100px
+    );
   }
+
   .About {
     padding-right: 150px;
     padding-left: 150px;
   }
+
   .Skills {
-    scroll-margin: -35px;
+    scroll-margin: -50px;
     padding-right: 150px;
     padding-left: 150px;
+    background-image: radial-gradient(
+      farthest-corner at bottom right,
+      #3f2323,
+      transparent 1000px
+    );
   }
+
   .Projects {
     scroll-margin: -35px;
     padding-right: 150px;
     padding-left: 150px;
   }
+
   .Contact {
     scroll-margin: -10px;
     padding-right: 150px;
     padding-left: 150px;
-  }
-
-  ul a {
-    margin-left: 20px;
+    background-image: radial-gradient(
+      farthest-corner at bottom right,
+      #3f2323,
+      transparent 1000px
+    );
   }
 
   .portait {
     width: 48vh;
     height: 48vh;
   }
+
   .introduction {
     width: 55%;
+    line-height: 2.7em;
   }
 
   .introduction p:nth-child(1) {
@@ -1269,18 +1347,13 @@ textarea:focus {
     margin-bottom: 45px;
   }
 
-  /* SKILLS */
-
-  .skill {
-    min-width: 30%;
-  }
-
   .Projects {
     grid-column-gap: 55px;
   }
 
   .checkIt {
-    width: 80%;
+    margin-left: 150px;
+    margin-right: 150px;
   }
 
   .projectPhoto {
@@ -1296,8 +1369,12 @@ textarea:focus {
 
 @media screen and (min-width: 1430px) {
   .portait {
-    width: 55vh;
-    height: 55vh;
+    width: 60vh;
+    height: 60vh;
+  }
+
+  .introduction {
+    line-height: 3em;
   }
 
   .introduction p:nth-child(1) {
@@ -1310,5 +1387,47 @@ textarea:focus {
 
   .introduction p:nth-child(3) {
     font-size: 32px;
+  }
+
+  .Home {
+    scroll-margin: 65px;
+    background-image: radial-gradient(
+      farthest-corner at top right,
+      #3f2323,
+      transparent 1400px
+    );
+  }
+
+  .About {
+    scroll-margin: 55px;
+  }
+
+  .Skills {
+    scroll-margin: -45px;
+    background-image: radial-gradient(
+      farthest-corner at bottom right,
+      #3f2323,
+      transparent 1300px
+    );
+  }
+
+  .skill {
+    min-width: 31.5%;
+  }
+
+  .Projects {
+    scroll-margin: -5px;
+  }
+
+  .Contact {
+    background-image: radial-gradient(
+      farthest-corner at bottom right,
+      #3f2323,
+      transparent 1300px
+    );
+  }
+
+  .social {
+    width: 28%;
   }
 }
