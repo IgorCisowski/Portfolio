@@ -552,7 +552,7 @@ article {
 
 .checkOut:hover::after {
   width: 100%;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
 }
 
 .checkOut a {
@@ -1144,6 +1144,9 @@ textarea:focus {
     font-size: 52px;
     line-height: 1.2em;
   }
+  .projectHeader i {
+    font-size: 40px;
+  }
 
   /* ABOUT */
   .About p:nth-child(2) {
@@ -1336,6 +1339,7 @@ textarea:focus {
   .introduction p:nth-child(3) {
     font-size: 22px;
   }
+
   .knowMore {
     padding-bottom: 0;
     margin-top: 0;
@@ -1358,10 +1362,6 @@ textarea:focus {
 
   .projectPhoto {
     padding: 180px 0;
-  }
-
-  .projectHeader i {
-    font-size: 32px;
   }
 }
 
