@@ -28,7 +28,11 @@ document.querySelectorAll("a[href='#']").forEach((el) => {
     e.preventDefault();
     document
       .querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
+      .scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
   });
 });
 
