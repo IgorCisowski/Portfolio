@@ -37,6 +37,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* BODY */
@@ -180,8 +181,8 @@ a {
 
 .portait {
   position: relative;
-  width: 40vh;
-  height: 40vh;
+  width: 34vh;
+  height: 34vh;
   border-radius: 50%;
 }
 
