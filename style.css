@@ -256,7 +256,7 @@ a {
   width: 100%;
   font-size: 30px;
   text-align: center;
-  padding-bottom: 48px;
+  padding-bottom: 60px;
 }
 
 .knowMore i {
@@ -430,7 +430,7 @@ h3 {
 /* SECTION PORTFOLIO */
 
 .Projects {
-  scroll-margin: 45px;
+  scroll-margin: 35px;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
@@ -586,7 +586,7 @@ article {
 /* CONTACT SECTION */
 
 .Contact {
-  scroll-margin: 50px;
+  scroll-margin: 40px;
   background-color: rgba(60, 60, 60, 0.2);
   width: 100%;
   padding: 70px 15px 70px;
