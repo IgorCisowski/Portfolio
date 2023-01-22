@@ -37,15 +37,14 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 /* BODY */
 
 body {
+  position: relative;
   line-height: 1.4em;
   color: white;
-  overflow-x: hidden;
   font-family: "Spacegrotesk", sans-serif;
   background-color: rgb(29, 29, 29);
 }
@@ -64,14 +63,13 @@ body {
 }
 
 .block {
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* NAVBAR */
 
 .Navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 50;
   display: flex;
@@ -110,7 +108,7 @@ ul {
   );
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
-  padding: 0px 30px 40px;
+  padding: 0px 30px 60px;
 }
 
 li {
@@ -162,6 +160,7 @@ a {
 /* HOME SECTION */
 
 .Home {
+  margin-top: 8vh;
   scroll-margin: 70px;
   display: flex;
   flex-direction: column;
@@ -179,30 +178,23 @@ a {
 
 /* HOME PORTRAIT */
 
-.portait {
-  position: relative;
-  width: 34vh;
-  height: 34vh;
+.portrait {
+  width: 32vh;
+  height: 32vh;
   border-radius: 50%;
+  overflow: hidden;
 }
 
-.portait img {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  border-radius: 50%;
+.portrait img {
+  max-width: 100%;
 }
 
-.portait::before,
+/* .portait::before,
 .portait::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  /* background-color: black; */
   background-color: #3f2323;
   border-radius: 50%;
   z-index: 1;
@@ -222,7 +214,7 @@ a {
     transform: scale(1.2);
     opacity: 0;
   }
-}
+} */
 
 /* HOME INTRODUCTION */
 
@@ -246,7 +238,7 @@ a {
 .connect {
   display: flex;
   justify-content: space-evenly;
-  width: 40%;
+  width: 35%;
   font-size: 30px;
   margin-top: 20px;
 }
@@ -390,12 +382,10 @@ h3 {
   background-color: rgba(29, 29, 29, 0.5);
   border-radius: 20px;
   padding: 60px 30px 50px;
-
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
-
   user-select: none;
 }
 
@@ -439,7 +429,7 @@ h3 {
 /* SECTION PORTFOLIO */
 
 .Projects {
-  scroll-margin: 60px;
+  scroll-margin: 50px;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
@@ -833,17 +823,13 @@ textarea:focus {
   }
 
   .Home {
+    gap: 20px;
     padding-top: 30px;
     background-image: radial-gradient(
       farthest-corner at top right,
       #3f2323,
       transparent 800px
     );
-  }
-
-  .portait {
-    width: 40vh;
-    height: 40vh;
   }
 
   .introduction {
@@ -875,6 +861,7 @@ textarea:focus {
   }
 
   .About {
+    scroll-margin: 55px;
     padding: 100px 24px 70px;
   }
 
@@ -892,6 +879,7 @@ textarea:focus {
   }
 
   .Contact {
+    scroll-margin: 30px;
     padding: 100px 24px 50px;
     background-image: radial-gradient(
       farthest-corner at right bottom,
@@ -984,21 +972,24 @@ textarea:focus {
     width: 54%;
   }
 
+  .social i {
+    font-size: 30px;
+  }
+
   .Footer {
     font-size: 18px;
   }
 }
 
-/*-----------------------------------------                                 MEDIA QUERIES MIN-WIDTH 992px                                -----------------------------------------*/
+/*-----------------------------------------                                 MEDIA QUERIES MIN-WIDTH 1020px                                -----------------------------------------*/
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1020px) {
   ul {
     justify-content: flex-end;
     flex-direction: row;
     position: static;
     height: auto;
     background: transparent;
-    /* background-color: transparent; */
     transform: none;
     padding: 0;
     transition: none;
@@ -1045,11 +1036,13 @@ textarea:focus {
 
   /* HOME */
   .Home {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding: 0 24px;
+    display: grid;
+    grid-row-gap: 0;
+    grid-column-gap: 30px;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 2.8fr 1fr;
+    align-items: center;
+    padding: 90px 24px 0;
     background-image: radial-gradient(
       farthest-corner at top right,
       #3f2323,
@@ -1057,18 +1050,42 @@ textarea:focus {
     );
   }
 
-  .portait {
-    /* flex-grow: 1; */
-    width: 60vh;
-    height: 60vh;
-    /* flex-grow: 1; */
+  .portrait {
+    margin-left: auto;
+    padding: 38px;
+    width: 100%;
+    height: auto;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
 
   .introduction {
     align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    grid-column-start: 1;
+    grid-row-start: 1;
     margin-top: 35px;
-    width: 55%;
     line-height: 2.9em;
+  }
+
+  .introduction p:nth-of-type(3) {
+    border-bottom: 2px solid #791818b6;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+
+  .knowMore {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .knowMore i {
+    font-size: 40px;
   }
 
   .introduction p:nth-child(1) {
@@ -1095,17 +1112,6 @@ textarea:focus {
 
   .link {
     margin-left: 25px;
-  }
-
-  .knowMore {
-    padding-bottom: 0;
-    margin-top: 0;
-    width: 100%;
-  }
-
-  .knowMore i {
-    font-size: 40px;
-    margin-bottom: 20px;
   }
 
   .About {
@@ -1266,8 +1272,8 @@ textarea:focus {
   }
 
   .Navbar {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .logo {
@@ -1279,9 +1285,8 @@ textarea:focus {
   }
 
   .Home {
-    padding-right: 150px;
-    padding-left: 150px;
-    /* padding-top: 50px; */
+    padding-right: 50px;
+    padding-left: 50px;
     background-image: radial-gradient(
       farthest-corner at top right,
       #3f2323,
@@ -1290,31 +1295,37 @@ textarea:focus {
   }
 
   .About {
-    padding-right: 150px;
-    padding-left: 150px;
+    scroll-margin: 55px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   .Skills {
     scroll-margin: -50px;
-    padding-right: 150px;
-    padding-left: 150px;
+    padding-right: 50px;
+    padding-left: 50px;
     background-image: radial-gradient(
       farthest-corner at bottom right,
       #3f2323,
       transparent 1000px
     );
+  }
+
+  .skill {
+    margin-right: 5px;
   }
 
   .Projects {
     scroll-margin: -35px;
-    padding-right: 150px;
-    padding-left: 150px;
+    grid-column-gap: 45px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   .Contact {
     scroll-margin: -10px;
-    padding-right: 150px;
-    padding-left: 150px;
+    padding-right: 50px;
+    padding-left: 50px;
     background-image: radial-gradient(
       farthest-corner at bottom right,
       #3f2323,
@@ -1322,13 +1333,7 @@ textarea:focus {
     );
   }
 
-  .portait {
-    width: 68vh;
-    height: 68vh;
-  }
-
   .introduction {
-    width: 55%;
     line-height: 2.7em;
   }
 
@@ -1355,37 +1360,30 @@ textarea:focus {
     margin-bottom: 45px;
   }
 
-  .Projects {
-    grid-column-gap: 45px;
-    padding-right: 150px;
-    padding-left: 150px;
-  }
-
-  article {
-    padding-bottom: 40px;
-  }
-
   .checkIt {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   .projectPhoto {
-    padding: 180px 0;
+    padding: 160px 0;
+  }
+
+  article {
+    padding-bottom: 65px;
+  }
+
+  .social {
+    width: 35%;
   }
 }
 
 /*                                 MEDIA QUERIES MIN-WIDTH 1430px                                */
 
 @media screen and (min-width: 1430px) {
-  .portait {
-    width: 65vh;
-    height: 65vh;
-  }
-
-  .Home {
-    padding-top: 60px;
-    padding-bottom: 40px;
+  .Navbar {
+    padding-left: 150px;
+    padding-right: 150px;
   }
 
   .introduction {
@@ -1405,6 +1403,8 @@ textarea:focus {
   }
 
   .Home {
+    padding-left: 150px;
+    padding-right: 150px;
     scroll-margin: 65px;
     background-image: radial-gradient(
       farthest-corner at top right,
@@ -1413,11 +1413,19 @@ textarea:focus {
     );
   }
 
+  .portrait {
+    padding: 42px;
+  }
+
   .About {
+    padding-left: 150px;
+    padding-right: 150px;
     scroll-margin: 55px;
   }
 
   .Skills {
+    padding-left: 150px;
+    padding-right: 150px;
     background-image: radial-gradient(
       farthest-corner at bottom right,
       #3f2323,
@@ -1429,14 +1437,22 @@ textarea:focus {
     min-width: 31.5%;
     padding-top: 70px;
     padding-bottom: 60px;
-    /* margin-right: 6px; */
+    margin-right: 2px;
   }
 
   .skill:nth-last-of-type(1) {
     margin-right: 7px;
   }
 
+  .Projects {
+    scroll-margin: -55px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
   .Contact {
+    padding-left: 150px;
+    padding-right: 150px;
     background-image: radial-gradient(
       farthest-corner at bottom right,
       #3f2323,
@@ -1447,22 +1463,31 @@ textarea:focus {
   .social {
     width: 28%;
   }
+
+  .checkIt {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
 }
 
-@media screen and (min-width: 1805px) {
-  .portait {
-    width: 58vh;
-    height: 58vh;
-  }
-
+@media screen and (min-width: 1805px) and (max-width: 2000px) {
   .Navbar {
-    padding-left: 166px;
-    padding-right: 166px;
+    padding-left: 300px;
+    padding-right: 300px;
   }
 
   .Home {
     scroll-margin: 80px;
-    padding: 110px 300px;
+    padding: 25vh 300px 0;
+  }
+
+  .portrait {
+    margin-left: auto;
+    padding: 24px;
+  }
+
+  .knowMore {
+    margin-top: 200px;
   }
 
   .About {
@@ -1473,19 +1498,21 @@ textarea:focus {
   .Skills {
     padding-left: 300px;
     padding-right: 300px;
-    scroll-margin: 55px;
+    padding-top: 165px;
+    scroll-margin: 77px;
   }
   .Projects {
     padding-left: 300px;
     padding-right: 300px;
-    scroll-margin: 55px;
+    scroll-margin: 65px;
   }
-  .skill {
-    margin-right: 6px;
+
+  .Project {
+    margin-left: 0;
   }
 
   .Contact {
-    scroll-margin: 55px;
+    scroll-margin: 60px;
     padding-left: 300px;
     padding-right: 300px;
   }

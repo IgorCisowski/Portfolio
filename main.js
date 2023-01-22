@@ -26,13 +26,11 @@ burgerMenu.addEventListener("click", toggleMenu);
 document.querySelectorAll("a[href='#']").forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
-    document
-      .querySelector(this.getAttribute("href"))
-      .scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
   });
 });
 
