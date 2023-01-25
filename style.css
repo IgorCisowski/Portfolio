@@ -1471,7 +1471,7 @@ textarea:focus {
   }
 }
 
-@media screen and (min-width: 1805px) and (max-width: 2000px) {
+@media screen and (min-width: 1805px) {
   .Navbar {
     padding-left: 300px;
     padding-right: 300px;
