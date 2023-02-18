@@ -61,3 +61,31 @@ wrapper.addEventListener("mousemove", function (e) {
 
   this.scrollLeft += startX - e.clientX;
 });
+
+const allLinks = document.querySelectorAll(".liLink");
+
+// li
+allLinks.forEach((li) => {
+  li.addEventListener("mouseover", () => {
+    addClass();
+    li.classList.remove("shrink");
+  });
+});
+
+const addClass = () => {
+  allLinks.forEach((li) => {
+    li.classList.add("shrink");
+  });
+};
+
+allLinks.forEach((li) => {
+  li.addEventListener("mouseleave", () => {
+    removeClass();
+  });
+});
+
+const removeClass = () => {
+  allLinks.forEach((li) => {
+    li.classList.remove("shrink");
+  });
+};

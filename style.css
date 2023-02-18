@@ -94,7 +94,7 @@ body {
 ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position: absolute;
   width: 100%;
@@ -114,17 +114,22 @@ ul {
 
 li {
   list-style: none;
-  padding: 35px 0;
+  /* padding: 35px 0; */
 }
 
 a {
+  /* padding: 35px 0; */
   text-decoration: none;
   color: white;
   font-size: 35px;
   font-weight: bold;
-  transition: 0.7s;
+  transition: 300ms ease;
 }
 
+.shrink {
+  font-size: 30px;
+  color: gray;
+}
 /* BURGER MENU */
 
 .burgerMenu {
@@ -818,10 +823,6 @@ textarea:focus {
   .active a {
     font-size: 40px;
     transition: 0.3s ease-in-out;
-  }
-
-  .active a:hover {
-    font-size: 47px;
   }
 
   .Home {
