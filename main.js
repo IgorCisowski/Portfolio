@@ -62,30 +62,45 @@ wrapper.addEventListener("mousemove", function (e) {
   this.scrollLeft += startX - e.clientX;
 });
 
-const allLinks = document.querySelectorAll(".liLink");
-
 // li
-allLinks.forEach((li) => {
-  li.addEventListener("mouseover", () => {
-    addClass();
-    li.classList.remove("shrink");
-  });
-});
+function isSmallScreen() {
+  let matchResult = window.matchMedia("(max-width: 1019px)");
+  const allLink = document.querySelectorAll(".liLink");
 
-const addClass = () => {
-  allLinks.forEach((li) => {
-    li.classList.add("shrink");
-  });
-};
+  if (matchResult.matches) {
+    allLink.forEach((li) => {
+      li.addEventListener("mouseover", () => {
+        addStyle();
+        li.classList.remove("shrink");
+      });
+    });
 
-allLinks.forEach((li) => {
-  li.addEventListener("mouseleave", () => {
-    removeClass();
-  });
-});
+    const addStyle = () => {
+      allLink.forEach((li) => {
+        li.classList.add("shrink");
+      });
+    };
+    const removeStyle = () => {
+      allLink.forEach((li) => {
+        li.classList.remove("shrink");
+      });
+    };
 
-const removeClass = () => {
-  allLinks.forEach((li) => {
-    li.classList.remove("shrink");
-  });
-};
+    allLink.forEach((li) => {
+      li.addEventListener("mouseleave", () => {
+        removeStyle();
+      });
+    });
+  } else if (window.matchMedia("(min-width: 1020px)")) {
+    allLink.forEach((li) => {
+      li.addEventListener("mouseover", () => {
+        allLink.forEach((li) => {
+          li.classList.remove("shrink");
+        });
+      });
+    });
+  }
+}
+
+onload = isSmallScreen;
+onresize = isSmallScreen;
