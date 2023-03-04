@@ -16,10 +16,12 @@
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav class="Navbar">
+    <header class="header">
+      <div class="headerContainer">
       <div class="logo">
         <i class="fa-solid fa-code"></i>
       </div>
+      <nav class="navbar">
       <ul>
         <li>
           <a  class="liLink" href="#Home">Home</a>
@@ -43,34 +45,42 @@
         <span class="line"></span>
       </div>
     </nav>
+  </div>
+    </header>
     <!-- HOME -->
-    <main class="Home" id="Home" >
-      <img class="portrait" src="images/igor.jpg" alt="Igor" data-aos="fade-up" />
-      <div class="introduction" data-aos="fade-up" data-aos-delay="150">
-        <p>Hello! I'm</p>
-        <p>Igor Cisowski</p>
-        <p>Front-end Developer</p>
-        <div class="connect">
-          <div class="git">
-            <a href="https://github.com/IGORCISOWSKI" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-          <div class="link">
-            <a href="https://www.linkedin.com/in/igor-cisowski-94375b244/" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
+    <section class="Home" id="Home" >
+      <div class="homeContainer">
+        <img class="portrait" src="images/igor.jpg" alt="Igor" data-aos="fade-up" />
+
+        <div class="introduction" data-aos="fade-up" data-aos-delay="150">
+          <p>Hello! I'm</p>
+          <p>Igor Cisowski</p>
+          <p>Front-end Developer</p>
+          <div class="connect">
+            <div class="git">
+              <a href="https://github.com/IGORCISOWSKI" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <div class="link">
+              <a href="https://www.linkedin.com/in/igor-cisowski-94375b244/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
           </div>
         </div>
+
+        <div class="knowMore" data-aos="fade-up" data-aos-delay="200">
+          <a href="#About">
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+        </div>
+
       </div>
-      <div class="knowMore" data-aos="fade-up" data-aos-delay="200">
-        <a href="#About">
-          <i class="fa-solid fa-chevron-down"></i>
-        </a>
-      </div>
-    </main>
+    </section>
     <!-- ABOUT SECTION -->
     <section class="About" id="About" >
+      <div class="aboutContainer">
       <div data-aos="fade-up" data-aos-delay="100">
       <h3 >
         <span>/</span> About me
@@ -83,9 +93,11 @@
         </a>
       </div>
     </div>
+      </div>
     </section>
     <!-- SKILLS SECTION -->
     <section class="Skills" id="Skills">
+      <div class="skillsContainer">
       <div class="skillsHeader" data-aos="fade-up" data-aos-delay="100">
         <h3>
           <span>/</span> My skills
@@ -142,9 +154,11 @@
       </div>
       <span class="swipe" data-aos="fade-up" data-aos-delay="100">
         <i class="fa-regular fa-hand-pointer"></i> swipe left </span>
+      </div>
     </section>
     <!-- PROJECTS SECTION -->
     <section class="Projects" id="Projects">
+      <div class="projectsContainer">
       <!-- PART ONE -->
       <div class="partOne">
         <div class="projectHeader" data-aos="fade-up" data-aos-delay="100">
@@ -242,10 +256,12 @@
           </article>
         </div>
       </div>
+      </div>
     </section>
     <span class="checkIt"></span>
     <!-- CONTACT SECTION -->
     <section class="Contact" id="Contact">
+      <div class="contactContainer">
       <div class="contactHeader" data-aos="fade-up" data-aos-delay="100">
         <h3>
           <span>/</span> Contact me
@@ -292,6 +308,7 @@
             <i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
+      </div>
       </div>
     </section>
     <!-- FOOTER -->

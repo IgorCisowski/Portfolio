@@ -42,7 +42,6 @@ html {
 /* BODY */
 
 body {
-  max-width: 1922px;
   position: relative;
   line-height: 1.4em;
   color: white;
@@ -69,22 +68,32 @@ body {
 
 /* NAVBAR */
 
-.Navbar {
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
-  z-index: 50;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px 0 15px;
+  z-index: 100;
   width: 100%;
   height: 8vh;
   box-shadow: 2px 0 10px black;
   background-color: rgb(29, 29, 29);
 }
 
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1350px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .logo {
-  flex-basis: 10%;
+  width: max-content;
   color: white;
   font-size: 23px;
 }
@@ -117,10 +126,6 @@ li {
 }
 
 li a {
-  text-decoration: none;
-  color: white;
-  font-size: 35px;
-  font-weight: bold;
   transition: 300ms ease;
 }
 
@@ -137,7 +142,14 @@ a {
 }
 /* BURGER MENU */
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .burgerMenu {
+  line-height: 0;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -188,6 +200,19 @@ a {
   );
 }
 
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1350px;
+  width: 100%;
+}
+
 /* HOME PORTRAIT */
 
 .portrait {
@@ -200,33 +225,6 @@ a {
 .portrait img {
   max-width: 100%;
 }
-
-/* .portait::before,
-.portait::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #3f2323;
-  border-radius: 50%;
-  z-index: 1;
-  opacity: 0.7;
-}
-
-.portait::before {
-  animation: portrait 3s ease-in-out infinite;
-}
-
-.portait::after {
-  animation: portrait 3s 2s ease-in-out infinite;
-}
-
-@keyframes portrait {
-  100% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-} */
 
 /* HOME INTRODUCTION */
 
@@ -264,10 +262,8 @@ a {
 }
 
 .knowMore {
-  width: 100%;
   font-size: 30px;
   text-align: center;
-  padding-bottom: 60px;
 }
 
 .knowMore i {
@@ -298,7 +294,15 @@ span {
   position: relative;
   scroll-margin: 65px;
   width: 100%;
-  padding: 70px 15px;
+  padding: 70px 0;
+}
+
+.aboutContainer {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .About p:nth-child(2) {
@@ -333,7 +337,7 @@ span {
 
 .Skills {
   scroll-margin: 60px;
-  padding: 70px 15px;
+  padding: 70px 0;
   width: 100%;
   background-color: rgba(60, 60, 60, 0.2);
   background-image: radial-gradient(
@@ -341,6 +345,14 @@ span {
     #3f2323,
     transparent 360px
   );
+}
+
+.skillsContainer {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .skillsHeader {
@@ -447,7 +459,15 @@ h3 {
   justify-content: baseline;
   gap: 35px;
   width: 100%;
-  padding: 70px 15px;
+  padding: 70px 0;
+}
+
+.projectsContainer {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .projectHeader {
@@ -469,6 +489,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 35px;
+  margin-bottom: 35px;
 }
 
 .secondOne {
@@ -588,8 +609,10 @@ article {
 }
 
 .checkIt {
+  width: 93%;
+  margin: 0 auto;
+  margin-bottom: 70px;
   display: block;
-  margin: 0 16px 70px;
   height: 2px;
   background-color: #791818b6;
 }
@@ -600,12 +623,20 @@ article {
   scroll-margin: 40px;
   background-color: rgba(60, 60, 60, 0.2);
   width: 100%;
-  padding: 70px 15px 70px;
+  padding: 70px 0 70px;
   background-image: radial-gradient(
     50% 50% at 100% 120%,
     #3f2323,
     transparent 450px
   );
+}
+
+.contactContainer {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .contactHeader {
@@ -835,7 +866,6 @@ textarea:focus {
 
   .Home {
     gap: 20px;
-    padding-top: 30px;
     background-image: radial-gradient(
       farthest-corner at top right,
       #3f2323,
@@ -867,17 +897,13 @@ textarea:focus {
     font-size: 30px;
   }
 
-  .knowMore i {
-    margin-top: 20px;
-  }
-
   .About {
     scroll-margin: 55px;
-    padding: 100px 24px 70px;
+    padding: 100px 0 70px;
   }
 
   .Skills {
-    padding: 100px 24px 60px;
+    padding: 100px 0 60px;
     background-image: radial-gradient(
       farthest-corner at right bottom,
       #3f2323,
@@ -886,12 +912,12 @@ textarea:focus {
   }
 
   .Projects {
-    padding: 100px 24px 50px;
+    padding: 100px 0 50px;
   }
 
   .Contact {
     scroll-margin: 30px;
-    padding: 100px 24px 50px;
+    padding: 100px 0 50px;
     background-image: radial-gradient(
       farthest-corner at right bottom,
       #3f2323,
@@ -932,10 +958,6 @@ textarea:focus {
     gap: 25px;
   }
 
-  .checkIt {
-    margin: 0 24px 70px;
-  }
-
   h3 {
     font-size: 20px;
   }
@@ -948,7 +970,7 @@ textarea:focus {
     font-size: 18px;
   }
 
-  .Projects {
+  .projectsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -1007,12 +1029,9 @@ textarea:focus {
     margin-right: 0px;
   }
 
-  .logo {
-    margin-left: 10px;
-  }
-
   li {
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   li a {
@@ -1047,18 +1066,33 @@ textarea:focus {
 
   /* HOME */
   .Home {
-    display: grid;
-    grid-row-gap: 0;
-    grid-column-gap: 30px;
-    grid-template-columns: 1.2fr 1fr;
-    grid-template-rows: 2.8fr 1fr;
-    align-items: center;
-    padding: 90px 24px 0;
     background-image: radial-gradient(
       farthest-corner at top right,
       #3f2323,
       transparent 1000px
     );
+  }
+  .headerContainer,
+  .homeContainer,
+  .aboutContainer,
+  .skillsContainer,
+  .projectsContainer,
+  .contactContainer {
+    padding: 0 24px;
+  }
+
+  .checkIt {
+    width: 91%;
+    margin-bottom: 35px;
+  }
+
+  .homeContainer {
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 30px;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 2.8fr auto;
+    align-items: center;
   }
 
   .portrait {
@@ -1088,11 +1122,11 @@ textarea:focus {
   }
 
   .knowMore {
+    margin-top: 10vh;
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 3;
     width: 100%;
-    margin-top: 10px;
   }
 
   .knowMore i {
@@ -1127,12 +1161,12 @@ textarea:focus {
 
   .About {
     scroll-margin: 53px;
-    padding: 160px 24px 140px;
+    padding: 160px 0 140px;
   }
 
   .Skills {
     scroll-margin: -40px;
-    padding: 160px 24px 120px;
+    padding: 160px 0 120px;
     background-image: radial-gradient(
       farthest-corner at bottom right,
       #3f2323,
@@ -1145,12 +1179,21 @@ textarea:focus {
   }
 
   .Contact {
-    padding: 170px 24px 70px;
+    padding: 170px 0 70px;
     background-image: radial-gradient(
       farthest-corner at bottom right,
       #3f2323,
       transparent 900px
     );
+  }
+
+  .contactContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .otherContact {
+    width: 100%;
   }
 
   .skillsHeader p,
@@ -1179,12 +1222,17 @@ textarea:focus {
 
   /* PROJECT */
   .Projects {
-    padding: 160px 24px 30px;
+    /* padding: 160px 24px 30px; */
+    padding: 160px 0 30px;
     scroll-margin: -30px;
   }
 
   .Project {
     margin: 0 10px 30px;
+  }
+
+  .partOne {
+    margin-bottom: 0;
   }
 
   article {
@@ -1196,6 +1244,7 @@ textarea:focus {
   }
 
   .checkIt {
+    max-width: 1230px;
     margin-bottom: 140px;
   }
 
@@ -1272,26 +1321,29 @@ textarea:focus {
 /*                                 MEDIA QUERIES MIN-WIDTH 1200px                                */
 
 @media screen and (min-width: 1200px) {
+  .headerContainer,
+  .homeContainer,
+  .aboutContainer,
+  .skillsContainer,
+  .projectsContainer,
+  .contactContainer {
+    padding: 0 50px;
+  }
+
+  .headerContainer {
+    padding-left: 54px;
+  }
+
+  .knowMore {
+    margin-top: 60px;
+  }
+
   li {
-    padding: 25px;
-  }
-
-  .Navbar {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .logo {
-    padding: 0;
-  }
-
-  ul {
-    padding: 0;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .Home {
-    padding-right: 50px;
-    padding-left: 50px;
     background-image: radial-gradient(
       farthest-corner at top right,
       #3f2323,
@@ -1301,14 +1353,10 @@ textarea:focus {
 
   .About {
     scroll-margin: 56px;
-    padding-right: 50px;
-    padding-left: 50px;
   }
 
   .Skills {
     scroll-margin: -40px;
-    padding-right: 50px;
-    padding-left: 50px;
     background-image: radial-gradient(
       farthest-corner at bottom right,
       #3f2323,
@@ -1319,19 +1367,16 @@ textarea:focus {
   .skill {
     margin-right: 5px;
     padding: 50px 30px;
+    min-width: 31%;
   }
 
   .Projects {
     scroll-margin: -15px;
     grid-column-gap: 45px;
-    padding-right: 50px;
-    padding-left: 50px;
   }
 
   .Contact {
     scroll-margin: -10px;
-    padding-right: 50px;
-    padding-left: 50px;
     background-image: radial-gradient(
       farthest-corner at bottom right,
       #3f2323,
@@ -1355,22 +1400,6 @@ textarea:focus {
     font-size: 22px;
   }
 
-  .knowMore {
-    padding-bottom: 0;
-    margin-top: 0;
-    width: 100%;
-  }
-
-  .knowMore i {
-    font-size: 40px;
-    margin-bottom: 45px;
-  }
-
-  .checkIt {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
   .projectPhoto {
     padding: 160px 0;
   }
@@ -1387,11 +1416,6 @@ textarea:focus {
 /*                                 MEDIA QUERIES MIN-WIDTH 1430px                                */
 
 @media screen and (min-width: 1430px) {
-  .Navbar {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
-
   .introduction {
     line-height: 3em;
   }
@@ -1409,8 +1433,6 @@ textarea:focus {
   }
 
   .Home {
-    padding-left: 150px;
-    padding-right: 150px;
     scroll-margin: 65px;
     background-image: radial-gradient(
       farthest-corner at top right,
@@ -1424,14 +1446,10 @@ textarea:focus {
   }
 
   .About {
-    padding-left: 150px;
-    padding-right: 150px;
     scroll-margin: 55px;
   }
 
   .Skills {
-    padding-left: 150px;
-    padding-right: 150px;
     background-image: radial-gradient(
       farthest-corner at bottom right,
       #3f2323,
@@ -1452,13 +1470,9 @@ textarea:focus {
 
   .Projects {
     scroll-margin: -55px;
-    padding-left: 150px;
-    padding-right: 150px;
   }
 
   .Contact {
-    padding-left: 150px;
-    padding-right: 150px;
     background-image: radial-gradient(
       farthest-corner at bottom right,
       #3f2323,
@@ -1469,22 +1483,12 @@ textarea:focus {
   .social {
     width: 28%;
   }
-
-  .checkIt {
-    margin-left: 150px;
-    margin-right: 150px;
-  }
 }
 
 @media screen and (min-width: 1805px) {
-  .Navbar {
-    padding-left: 300px;
-    padding-right: 300px;
-  }
-
   .Home {
     scroll-margin: 80px;
-    padding: 24vh 300px 0;
+    /* padding: 24vh 0 0; */
   }
 
   .portrait {
@@ -1492,24 +1496,16 @@ textarea:focus {
     padding: 24px;
   }
 
-  .knowMore {
-    margin-top: 150px;
-  }
-
   .About {
     scroll-margin: 75px;
-    padding: 240px 300px 260px;
+    padding: 240px 0 260px;
   }
 
   .Skills {
-    padding-left: 300px;
-    padding-right: 300px;
     padding-top: 165px;
     scroll-margin: 77px;
   }
   .Projects {
-    padding-left: 300px;
-    padding-right: 300px;
     scroll-margin: 65px;
   }
 
@@ -1519,12 +1515,5 @@ textarea:focus {
 
   .Contact {
     scroll-margin: 60px;
-    padding-left: 300px;
-    padding-right: 300px;
-  }
-
-  .checkIt {
-    margin-left: 300px;
-    margin-right: 300px;
   }
 }

@@ -15,18 +15,21 @@ const exit = () => {
   document.body.classList.remove("block");
 };
 
-li.forEach((a) => {
-  a.addEventListener("click", exit);
-});
+// li.forEach((a) => {
+//   a.addEventListener("click", exit);
+// });
 
 burgerMenu.addEventListener("click", toggleMenu);
 
 // SCROLL TO SECTION SCRIPT
 
-document.querySelectorAll("a[href='#']").forEach((el) => {
+document.querySelectorAll(".liLink").forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
+    exit();
+    console.log(el.getAttribute("href"));
+
+    document.querySelector(el.getAttribute("href")).scrollIntoView({
       behavior: "smooth",
     });
   });
