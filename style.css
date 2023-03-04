@@ -184,6 +184,7 @@ a {
 
 .Home {
   margin-top: 8vh;
+  padding-top: 60px;
   scroll-margin: 70px;
   display: flex;
   gap: 45px;
@@ -207,7 +208,6 @@ a {
   align-items: center;
   gap: 40px;
   margin: 0 auto;
-  padding-top: 60px;
   padding-left: 15px;
   padding-right: 15px;
   max-width: 1350px;
@@ -866,6 +866,7 @@ textarea:focus {
   }
 
   .Home {
+    padding-top: 100px;
     gap: 20px;
     background-image: radial-gradient(
       farthest-corner at top right,
@@ -1067,6 +1068,8 @@ textarea:focus {
 
   /* HOME */
   .Home {
+    padding-top: 0;
+    justify-content: center;
     background-image: radial-gradient(
       farthest-corner at top right,
       #3f2323,
