@@ -222,11 +222,6 @@ a {
   border-radius: 50%;
   overflow: hidden;
 }
-
-.portrait img {
-  max-width: 100%;
-}
-
 /* HOME INTRODUCTION */
 
 .introduction {
@@ -1095,14 +1090,14 @@ textarea:focus {
     grid-row-gap: 0px;
     grid-column-gap: 30px;
     grid-template-columns: 1.2fr 1fr;
-    grid-template-rows: 2.8fr auto;
+    grid-template-rows: auto;
     align-items: center;
   }
 
   .portrait {
-    margin-left: auto;
-    padding: 38px;
+    max-width: 85%;
     width: 100%;
+    margin-left: auto;
     height: auto;
     grid-column-start: 2;
     grid-row-start: 1;
@@ -1126,7 +1121,6 @@ textarea:focus {
   }
 
   .knowMore {
-    margin-top: 10vh;
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -1331,15 +1325,12 @@ textarea:focus {
   .skillsContainer,
   .projectsContainer,
   .contactContainer {
-    padding: 0 50px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .headerContainer {
     padding-left: 54px;
-  }
-
-  .knowMore {
-    margin-top: 60px;
   }
 
   li {
@@ -1446,7 +1437,7 @@ textarea:focus {
   }
 
   .portrait {
-    padding: 42px;
+    max-width: 88%;
   }
 
   .About {
@@ -1490,14 +1481,12 @@ textarea:focus {
 }
 
 @media screen and (min-width: 1805px) {
-  .Home {
-    scroll-margin: 80px;
-    /* padding: 24vh 0 0; */
+  .portrait {
+    max-width: 95%;
   }
 
-  .portrait {
-    margin-left: auto;
-    padding: 24px;
+  .Home {
+    scroll-margin: 80px;
   }
 
   .About {
