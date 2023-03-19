@@ -837,6 +837,12 @@ textarea:focus {
   font-weight: 500;
 }
 
+.Footer .year {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
 /*-----------------------------------------                                 MEDIA QUERIES MIN-WIDTH 768px                                -----------------------------------------*/
 
 @media screen and (min-width: 768px) {
@@ -1007,6 +1013,9 @@ textarea:focus {
   }
 
   .Footer {
+    font-size: 18px;
+  }
+  .Footer .year {
     font-size: 18px;
   }
 }
@@ -1220,7 +1229,6 @@ textarea:focus {
 
   /* PROJECT */
   .Projects {
-    /* padding: 160px 24px 30px; */
     padding: 160px 0 30px;
     scroll-margin: -30px;
   }
@@ -1482,7 +1490,7 @@ textarea:focus {
 
 @media screen and (min-width: 1805px) {
   .portrait {
-    max-width: 95%;
+    max-width: 90%;
   }
 
   .Home {

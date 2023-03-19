@@ -107,3 +107,8 @@ function isSmallScreen() {
 
 onload = isSmallScreen;
 onresize = isSmallScreen;
+
+// Update footer date
+const span = document.querySelector(".year");
+const date = new Date().getFullYear();
+span.textContent = date;
