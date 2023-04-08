@@ -244,17 +244,34 @@ a {
 .connect {
   display: flex;
   justify-content: space-evenly;
-  width: 35%;
   font-size: 30px;
   margin-top: 20px;
 }
 
+.connect i {
+  transition: 0.3s;
+}
+
+.connect:hover i {
+  color: gray;
+}
+
 .git {
+  padding-right: 12px;
   cursor: pointer;
 }
 
+.git:hover i {
+  color: white;
+}
+
 .link {
+  padding-left: 12px;
   cursor: pointer;
+}
+
+.link:hover i {
+  color: white;
 }
 
 .knowMore {
@@ -814,17 +831,24 @@ textarea:focus {
 
 .social {
   display: flex;
-  width: 70%;
   justify-content: space-evenly;
   font-size: 30px;
 }
 
-.social i {
-  transition: 0.2s;
+.social:hover i {
+  color: gray;
 }
 
-.social i:hover {
-  transform: translateY(-4px);
+#social {
+  padding: 0 27px;
+}
+
+#social:hover i {
+  color: white;
+}
+
+.social i {
+  transition: 0.3s;
 }
 
 /* FOOTER */
@@ -841,6 +865,19 @@ textarea:focus {
   font-size: 16px;
   font-weight: 500;
   color: white;
+}
+
+.ArrowToTop {
+  opacity: 0;
+  z-index: 20;
+  animation: jump 1.2s linear infinite;
+  cursor: pointer;
+  font-size: 20px;
+  position: fixed;
+  right: 10px;
+  bottom: 25px;
+  color: white;
+  transition: 0.5s;
 }
 
 /*-----------------------------------------                                 MEDIA QUERIES MIN-WIDTH 768px                                -----------------------------------------*/
@@ -890,10 +927,6 @@ textarea:focus {
 
   .introduction p:nth-child(3) {
     font-size: 22px;
-  }
-
-  .connect {
-    width: 20%;
   }
 
   .connect i {
@@ -1004,8 +1037,8 @@ textarea:focus {
     font-size: 20px;
   }
 
-  .social {
-    width: 54%;
+  #social {
+    padding: 0 37px;
   }
 
   .social i {
@@ -1154,16 +1187,11 @@ textarea:focus {
 
   .connect {
     justify-content: flex-start;
-    width: 30%;
     margin-top: 10px;
   }
 
   .connect i {
     font-size: 30px;
-  }
-
-  .link {
-    margin-left: 25px;
   }
 
   .About {
@@ -1315,9 +1343,9 @@ textarea:focus {
     font-size: 20px;
   }
 
-  .social {
+  /* .social {
     width: 40%;
-  }
+  } */
 
   .social i {
     font-size: 30px;
@@ -1327,6 +1355,12 @@ textarea:focus {
 /*                                 MEDIA QUERIES MIN-WIDTH 1200px                                */
 
 @media screen and (min-width: 1200px) {
+  .ArrowToTop {
+    font-size: 30px;
+    right: 15px;
+    bottom: 25px;
+  }
+
   .headerContainer,
   .homeContainer,
   .aboutContainer,
@@ -1411,14 +1445,18 @@ textarea:focus {
     padding-bottom: 65px;
   }
 
-  .social {
+  /* .social {
     width: 35%;
-  }
+  } */
 }
 
 /*                                 MEDIA QUERIES MIN-WIDTH 1430px                                */
 
 @media screen and (min-width: 1430px) {
+  .ArrowToTop {
+    right: 25px;
+  }
+
   .introduction {
     line-height: 3em;
   }
@@ -1483,12 +1521,15 @@ textarea:focus {
     );
   }
 
-  .social {
+  /* .social {
     width: 28%;
-  }
+  } */
 }
 
 @media screen and (min-width: 1805px) {
+  .ArrowToTop {
+    right: 35px;
+  }
   .portrait {
     max-width: 90%;
   }

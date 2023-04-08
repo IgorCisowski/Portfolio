@@ -27,8 +27,6 @@ document.querySelectorAll(".liLink").forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
     exit();
-    console.log(el.getAttribute("href"));
-
     document.querySelector(el.getAttribute("href")).scrollIntoView({
       behavior: "smooth",
     });
@@ -112,3 +110,31 @@ onresize = isSmallScreen;
 const span = document.querySelector(".year");
 const date = new Date().getFullYear();
 span.textContent = date;
+
+// Arrow to top
+
+const toTop = document.querySelector(".ArrowToTop");
+
+const handleTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+window.addEventListener("scroll", () => {
+  window.scrollY > 350
+    ? (toTop.style.opacity = "1")
+    : (toTop.style.opacity = "0");
+});
+
+toTop.addEventListener("click", handleTop);
+
+let prevScrollpos = window.pageYOffset;
+window.onscroll = () => {
+  let currentScrollPos = window.pageYOffset;
+  prevScrollpos > currentScrollPos
+    ? (toTop.style.bottom = "25px")
+    : (toTop.style.bottom = "-50px");
+  prevScrollpos = currentScrollPos;
+};
